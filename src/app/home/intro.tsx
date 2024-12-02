@@ -82,10 +82,10 @@ export default function HomeIntro({ onContactClick }: Props) {
             <div className="flex justify-between">
               <div className="py-4">
                 <Image
-                  src={"/svg/advika-cloud-logo.svg"}
+                  src={"/svg/advika-logo.svg"}
                   alt="Advika Cloud"
-                  width={254}
-                  height={45}
+                  width={193}
+                  height={63}
                 />
               </div>
               <ul className="flex items-center gap-12 text-xl font-medium uppercase">
