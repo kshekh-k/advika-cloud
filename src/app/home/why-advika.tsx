@@ -1,11 +1,14 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
-export default function HomeWhyAdvika() {
+type Props = {
+  onContactClick: () => void;
+};
+export default function HomeWhyAdvika({ onContactClick }: Props) {
   return (
     <section className="bg-primary text-white pb-20">
       <div className="py-20 relative overflow-hidden">
-        <div className="container">
+        <div className="container relative z-10">
           <h2 className="text-6xl font-semibold text-secondary leading-tight">
             Why Advika
           </h2>
@@ -13,7 +16,12 @@ export default function HomeWhyAdvika() {
             Explore Our Impressive Stats!
           </h3>
 
-          <Button variant={"white"} size={"lg"} className="uppercase mt-10">
+          <Button
+            variant={"white"}
+            size={"lg"}
+            className="uppercase mt-10"
+            onClick={onContactClick}
+          >
             Book a Call
           </Button>
         </div>

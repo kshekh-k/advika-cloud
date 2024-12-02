@@ -1,6 +1,16 @@
-import { Plus } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import React from "react";
+import { cn } from "@/lib/utils";
+import { FAQS } from "@/data/faqs";
 
 export default function Faqs() {
+  const [activeIndex, setActiveIndex] = React.useState<number | null>(null);
+
   return (
     <div className="container">
       {/* FAQs */}
@@ -9,7 +19,42 @@ export default function Faqs() {
       </h2>
 
       <div className="mt-16 max-w-5xl mx-auto">
-        <ul>
+        <Accordion
+          type="single"
+          collapsible
+          onValueChange={(value) => {
+            return value !== ""
+              ? setActiveIndex(Number(value))
+              : setActiveIndex(null);
+          }}
+        >
+          {FAQS.map((faq, index) => (
+            <AccordionItem
+              key={index}
+              value={String(index)}
+              className={cn(
+                "px-10 duration-200",
+                index === FAQS.length - 1 && "border-b-0",
+                activeIndex && index === activeIndex - 1 && "border-b-0",
+                index === activeIndex && "bg-white border rounded-xl py-8 mb-11"
+              )}
+            >
+              <AccordionTrigger
+                className={cn(
+                  "text-2xl font-semibold text-black/60",
+                  index === activeIndex ? "py-4" : "py-11"
+                )}
+              >
+                0{index + 1}. {faq.question}
+              </AccordionTrigger>
+              <AccordionContent>
+                <p className="text-black/60 leading-loose mt-6">{faq.answer}</p>
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+
+        {/* <ul>
           <li className="py-8 px-10 border rounded-xl bg-white mb-11">
             <div className="flex items-center justify-between gap-8">
               <h3 className="text-2xl font-semibold text-black/60">
@@ -43,7 +88,7 @@ export default function Faqs() {
               <Plus strokeWidth={2.5} />
             </div>
           </li>
-        </ul>
+        </ul> */}
       </div>
     </div>
   );

@@ -2,7 +2,10 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function HomeIntro() {
+type Props = {
+  onContactClick: () => void;
+};
+export default function HomeIntro({ onContactClick }: Props) {
   return (
     <section className="bg-primary text-white overflow-hidden">
       <header className="relative z-10">
@@ -125,6 +128,7 @@ export default function HomeIntro() {
                 variant={"white"}
                 size={"lg"}
                 className="uppercase font-medium"
+                onClick={onContactClick}
               >
                 Book A Call
               </Button>
