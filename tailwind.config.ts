@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-
+const defaultTheme = require('tailwindcss/defaultTheme')
 export default {
   darkMode: ["class"],
   content: [
@@ -72,8 +72,14 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        poppins: "var(--font-poppins)",
+   
+        sans: ["var(--poppins)", ...defaultTheme.fontFamily.sans],   
       },
+      boxShadow:{
+        1:'0px 10px 35px 0px rgba(0, 0, 0, 0.25)',
+        2:'0px 10px 35px 0px rgba(0, 0, 0, 0.15)'
+        
+      }
     },
   },
   // eslint-disable-next-line @typescript-eslint/no-require-imports

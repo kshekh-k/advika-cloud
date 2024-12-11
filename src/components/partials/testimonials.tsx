@@ -1,68 +1,102 @@
+'use client'
+import React, { useRef, useState } from 'react';
 import Image from "next/image";
-
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Pagination } from 'swiper/modules';
+import { Quoteicon } from '@/icons';
+const testimonies = [
+  {
+    quote: 'Advika Web Hosting is a reliable and affordable hosting solution provider The customer support team is very strong and gives us quick solutions. I am using VPS server for more than 7 years.',
+    name: 'Abhishek Singh',
+    location: 'Gurugram'
+  },
+  {
+    quote: 'Advika Web Hosting is a reliable and affordable hosting solution provider The customer support team is very strong and gives us quick solutions. I am  using VPS server for more than 7 years.',
+    name: 'Abhishek Singh',
+    location: 'Gurugram'
+  },
+]
 export default function Testimonials() {
   return (
     <div className="container">
       {/* Testimonials */}
-      <h2 className="text-6xl font-semibold text-primary text-center">
+      <h2 className="text-5xl font-bold text-primary text-center leading-snug">
         What Customers Say?
+
+        <span className="text-black/60 block">
+          Testimonials
+        </span>
       </h2>
-      <h2 className="text-6xl font-semibold text-black/60 text-center leading-loose">
-        Testimonials
-      </h2>
-      <div className="grid grid-cols-2 gap-10 mt-16">
-        <div className="rounded-lg bg-[#002175]/5 p-10">
-          <div className="bg-white p-9 rounded-lg border border-[#002175]/50">
-            <p className="italic text-black/60 leading-loose text-xl">
-              Advika Web Hosting is a reliable and affordable hosting solution
-              provider The customer support team is very strong and gives us
-              quick solutions. I am using VPS server for more than 7 years.
-            </p>
-          </div>
-          <div className="mt-6 flex items-center gap-8">
-            <div className="rounded-full bg-red-300 size-16 outline outline-1 outline-offset-8 outline-black/10 ml-2">
-              <Image
-                src={
-                  "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                }
-                className="size-full rounded-full object-cover"
-                alt="John Doe"
-                width={100}
-                height={100}
-              />
+      <div className=" mt-16">
+
+        <Swiper
+          slidesPerView={2}
+          spaceBetween={30}
+          pagination={false}     
+          autoplay={true}     
+          className="mySwiper"
+        >
+          <SwiperSlide>
+
+            <div className="rounded-lg bg-primary/5 p-10 space-y-3">
+              <div className="bg-white p-9 rounded border border-primary/50 relative">
+              <Quoteicon className="size-16 text-primary/5 absolute left-5 top-5" />
+                <p className="italic text-black/60 leading-loose text-xl relative z-10">
+                  Advika Web Hosting is a reliable and affordable hosting solution
+                  provider The customer support team is very strong and gives us
+                  quick solutions. I am using VPS server for more than 7 years.
+                </p>
+              </div>
+              <div className="space-y-1 pt-3">
+                <h4 className="text-black/70 text-xl font-semibold">John Doe</h4>
+                <p className="text-black/50 text-lg">CEO, Company Name</p>
+              </div>
             </div>
-            <div>
-              <h4 className="font-semibold">John Doe</h4>
-              <p className="text-black/60">CEO, Company Name</p>
+
+          </SwiperSlide>
+          <SwiperSlide>
+
+            <div className="rounded-lg bg-primary/5 p-10 space-y-3">
+              <div className="bg-white p-9 rounded border border-primary/50 relative">
+              <Quoteicon className="size-16 text-primary/10 absolute left-5 top-5" />
+                <p className="italic text-black/60 leading-loose text-xl relative z-10">
+                  Advika Web Hosting is a reliable and affordable hosting solution
+                  provider The customer support team is very strong and gives us
+                  quick solutions. I am using VPS server for more than 7 years.
+                </p>
+              </div>
+              <div className="space-y-1 pt-3">
+                <h4 className="text-black/70 text-xl font-bold">John Doe</h4>
+                <p className="text-black/50 text-lg">CEO, Company Name</p>
+              </div>
             </div>
-          </div>
-        </div>
-        <div className="rounded-lg bg-[#002175]/5 p-10">
-          <div className="bg-white p-9 rounded-lg border border-[#002175]/50">
-            <p className="italic text-black/60 leading-loose text-xl">
-              Advika Web Hosting is a reliable and affordable hosting solution
-              provider The customer support team is very strong and gives us
-              quick solutions. I am using VPS server for more than 7 years.
-            </p>
-          </div>
-          <div className="mt-6 flex items-center gap-8">
-            <div className="rounded-full bg-red-300 size-16 outline outline-1 outline-offset-8 outline-black/10 ml-2">
-              <Image
-                src={
-                  "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                }
-                className="size-full rounded-full object-cover"
-                alt="John Doe"
-                width={100}
-                height={100}
-              />
+
+          </SwiperSlide>
+          <SwiperSlide>
+
+            <div className="rounded-lg bg-primary/5 p-10 space-y-3">
+              <div className="bg-white p-9 rounded border border-primary/50 relative">
+              <Quoteicon className="size-16 text-primary/10 absolute left-5 top-5" />
+                <p className="italic text-black/60 leading-loose text-xl relative z-10">
+                  Advika Web Hosting is a reliable and affordable hosting solution
+                  provider The customer support team is very strong and gives us
+                  quick solutions. I am using VPS server for more than 7 years.
+                </p>
+              </div>
+              <div className="space-y-1 pt-3">
+                <h4 className="text-black/70 text-xl font-bold">John Doe</h4>
+                <p className="text-black/50 text-lg">CEO, Company Name</p>
+              </div>
             </div>
-            <div>
-              <h4 className="font-semibold">John Doe</h4>
-              <p className="text-black/60">CEO, Company Name</p>
-            </div>
-          </div>
-        </div>
+
+          </SwiperSlide>
+
+        </Swiper>
+
+ 
       </div>
     </div>
   );
