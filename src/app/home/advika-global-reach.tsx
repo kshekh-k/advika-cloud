@@ -16,15 +16,15 @@ const stats =[
 ]
 export default function AdvikaGlobalReach() {
   return (
-    <section className="bg-black/5 pt-24 pb-20">
+    <section className="bg-black/5 pt-10 lg:py-16 2xl:pt-24 2xl:pb-20">
       <div className="container">
-        <div className="grid grid-cols-2">
-          <div className="border-r pr-10">
-            <h2 className="text-5xl leading-normal font-bold text-primary">
+        <div className="flex flex-col lg:grid lg:grid-cols-2">
+          <div className="border-black/10 lg:border-r pb-5 lg:pb-0 lg:pr-10">
+            <h2 className="text-3xl lg:text-5xl leading-normal lg:leading-normal font-bold text-primary">
               Advika&apos;s Technological Superiority
             </h2>
           </div>
-          <div className="text-black/60 font-medium leading-loose space-y-5 pl-12">
+          <div className="text-black/60 font-medium leading-loose space-y-5 lg:pl-12">
             <p>
               We are the pioneers in Cloud Server and Dedicated Server services
               in India, offering highly affordable and reliable server solutions
@@ -50,21 +50,28 @@ export default function AdvikaGlobalReach() {
           </div>
         </div>
 
-        <div className="relative flex items-center">
+        <div className="relative flex justify-center items-center min-h-96 lg:min-h-0 overflow-hidden">
           <Image
             src={"/images/advika-map-vector.svg"}
             alt="Advika Global Reach"
-            className="mt-12"
+            className="mt-10 hidden lg:block w-full"
             width={1400}
             height={800}
           />
+          <Image
+            src={"/images/advika-map-mobile-vector.svg"}
+            alt="Advika Global Reach"
+            className="mt-5 lg:hidden md:h-auto md:w-full md:max-w-full object-cover h-full max-w-xl"
+            width={1024}
+            height={630}
+          />
           <div className="absolute inset-0 flex justify-center items-center">
-            <div className="max-w-md mr-auto ml-72 flex gap-5 justify-center">
+            <div className="max-w-md mr-auto pl-5 md:pl-20 lg:ml-72 flex flex-wrap lg:flex-nowrap gap-2 lg:gap-5 justify-center">
 
 {stats.map((item,index)=>
- <div key={index} className="bg-white rounded-md shadow-2 gap-1 p-5 w-40 flex flex-col items-center justify-center">
- <h3 className="text-primary font-bold text-4xl text-center">{item.value}</h3>
- <p className="text-center text-black/50 uppercase font-semibold text-sm">{item.tagline}</p>
+ <div key={index} className="bg-white rounded-md shadow-2 gap-1 p-3 lg:p-5 w-24 lg:w-40 flex flex-col items-center justify-center">
+ <h3 className="text-primary font-bold text-2xl lg:text-4xl text-center">{item.value}</h3>
+ <p className="text-[10px] lg:text-sm text-center text-black/50 uppercase font-semibold">{item.tagline}</p>
 </div>
 )}
 

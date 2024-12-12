@@ -18,13 +18,13 @@ const Accordion: React.FC<AccordionProps> = ({ items }) => {
   return (
     <div className=" ">
       {items.map((item, index) => (
-        <div key={index} className={`pl-10 p-5 ${openIndex === index ? 'rounded-md bg-white shadow-2 mb-10' : 'border-b border-black/10'}`}>
+        <div key={index} className={`lg:pl-10 p-5 ${openIndex === index ? 'rounded-md bg-white shadow-2 mb-10' : 'border-b border-black/10'}`}>
           <button
             className="flex-1 w-full flex focus:outline-none"
             onClick={() => toggleAccordion(index)}
           >
             <div className="flex justify-between items-center text-left flex-1 gap-2 text-black/60">
-              <span className="font-semibold text-xl">{item.title}</span>
+              <span className="font-semibold lg:text-xl">{item.title}</span>
               <span>{openIndex === index ? 
               <Minus strokeWidth={3} className='text-gray-600' />
               : 
@@ -33,7 +33,7 @@ const Accordion: React.FC<AccordionProps> = ({ items }) => {
             </div>
           </button>
           {openIndex === index && (
-            <div className="pt-5">
+            <div className="pt-2 lg:pt-5">
               <p className='text-black/50 leading-loose'>{item.content}</p>
             </div>
           )}

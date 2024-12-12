@@ -11,14 +11,15 @@ const DialogCustom = React.forwardRef<
   React.ElementRef<typeof Dialog>,
   React.ComponentPropsWithoutRef<typeof Dialog> & {
     title?: string;
+    className?: string;
   }
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
->(({ open, onOpenChange, children, title }, ref) => {
+>(({ open, onOpenChange, children, title, className }, ref) => {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent hideClose>
-        <DialogHeader className="hidden">
-          <DialogTitle>{title || "App title here"}</DialogTitle>
+      <DialogContent hideClose className={className}>
+        <DialogHeader className="pb-5">
+          <DialogTitle className=" text-2xl text-white font-semibold tracking-wider uppercase">{title || "App title here"}</DialogTitle>
         </DialogHeader>
         {children}
       </DialogContent>

@@ -1,4 +1,5 @@
 import Accordion from "../ui/accordion";
+import React from 'react'
 const accordionItems = [
   {
     title: " 01. What is Web hosting? ",
@@ -23,16 +24,14 @@ const accordionItems = [
 ];
 
 export default function Faqs() {
-  const [activeIndex, setActiveIndex] = React.useState<number | null>(null);
-
   return (
     <div className="container">
       {/* FAQs */}
-      <h2 className="text-5xl font-bold text-primary text-center">
+      <h2 className="text-3xl lg:text-5xl font-bold text-primary text-center">
         Frequently Asked Queries
       </h2>
 
-      <div className="mt-16 max-w-4xl mx-auto">
+      <div className="mt-5 xl:mt-16 max-w-4xl mx-auto">
 
 
 <Accordion  items={accordionItems} />
