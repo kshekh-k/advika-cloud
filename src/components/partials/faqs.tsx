@@ -23,6 +23,8 @@ const accordionItems = [
 ];
 
 export default function Faqs() {
+  const [activeIndex, setActiveIndex] = React.useState<number | null>(null);
+
   return (
     <div className="container">
       {/* FAQs */}

@@ -5,7 +5,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { IoMdArrowDropright } from "react-icons/io";
 
-export default function HomeIntro() {
+type Props = {
+  onContactClick: () => void;
+};
+export default function HomeIntro({ onContactClick }: Props) {
   return (
     <>
     <div className="h-screen flex flex-col">
