@@ -1,108 +1,43 @@
-import Image from "next/image";
+import { Cloudgearicon, Mailenvelopicon, Targeticon } from "@/icons";
+const features = [
+  {
+    icon: <Cloudgearicon className="w-10 lg:w-14" />,
+    name: 'Custom Solutions',
+    tagline: 'With Advika Cloud Simplify, Streamline, and Accelerate Your Business',
+    active: false
+  },
+  {
+    icon: <Mailenvelopicon className="w-10 lg:w-14" />,
+    name: 'Get Quick',
+    tagline: '24x7 dedicated network operation center to resolve all your queries or issues',
+    active: true
+  },
+  {
+    icon: <Targeticon className="w-10 lg:w-14" />,
+    name: 'Futuristic Approach',
+    tagline: 'Prioritizing digital transformation and technological advancement',
+    active: false
+  },
+]
 
 export default function HomeFeatures() {
   return (
-    <section className="bg-white py-32">
+    <section className="bg-white py-16 2xl:py-32">
       <div className="container">
-        {/* <h2 className="text-4xl font-semibold text-center capitalize">
-            Over 15000+ Enterprises trust on us
-          </h2>
-          <div className="flex items-center justify-between mt-12">
-            <Image
-              src={"/svg/partners/infosys.svg"}
-              alt="Infosys"
-              width={101}
-              height={39}
-            />
-            <Image
-              src={"/svg/partners/axis-bank.svg"}
-              alt="Axis Bank"
-              width={135}
-              height={35}
-            />
-            <Image
-              src={"/svg/partners/itc.svg"}
-              alt="ITC"
-              width={44}
-              height={45}
-            />
-            <Image
-              src={"/svg/partners/ntpc.svg"}
-              alt="ITC"
-              width={94}
-              height={46}
-            />
-            <Image
-              src={"/svg/partners/airtel.svg"}
-              alt="Airtel"
-              width={48}
-              height={48}
-            />
-            <Image
-              src={"/svg/partners/google.svg"}
-              alt="Google"
-              width={126}
-              height={41}
-            />
-            <Image
-              src={"/svg/partners/L&T.svg"}
-              alt="L&T"
-              width={43}
-              height={43}
-            />
-            <Image
-              src={"/svg/partners/hcl.svg"}
-              alt="HCL Tech"
-              width={148}
-              height={27}
-            />
-            <Image
-              src={"/svg/partners/tata.svg"}
-              alt="Tata"
-              width={44}
-              height={38}
-            />
-          </div> */}
-
-        <div className="grid grid-cols-3">
-          <div className="p-12 border">
-            <Image
-              src={"/svg/cloud-gear.svg"}
-              alt="Cloud Gear"
-              width={69}
-              height={65}
-            />
-            <h2 className="text-4xl font-semibold mt-4">Custom Solutions</h2>
-            <p className="text-black/60 mt-2">
-              Experience unparalleled speed, reliability, and security with our
-              .
-            </p>
-          </div>
-          <div className="p-12 bg-primary text-white">
-            <Image
-              src={"/svg/mail-envelop.svg"}
-              alt="Cloud Gear"
-              width={69}
-              height={65}
-            />
-            <h2 className="text-4xl font-semibold mt-4">Get Quick</h2>
-            <p className="text-white/70 mt-2">
-              Experience unparalleled speed, reliability, and security with our
-              .
-            </p>
-          </div>
-          <div className="p-12 border">
-            <Image
-              src={"/svg/target.svg"}
-              alt="Cloud Gear"
-              width={69}
-              height={65}
-            />
-            <h2 className="text-4xl font-semibold mt-4">Futuristic Approach</h2>
-            <p className="text-black/60 mt-2">
-              Experience unparalleled speed, reliability, and security with our
-              .
-            </p>
+        <div className="max-w-full pb-3 lg:pb-0 overflow-auto lg:overflow-visible">
+          <div className="grid grid-cols-3 gap-5 lg:gap-10 min-w-[750px]">
+            {features.map((item, index) =>
+              <div key={index} className={`p-5 xl:p-10 2xl:p-16 space-y-3 lg:space-y-5  ${item.active ? 'bg-primary text-white' : ' bg-black/5'}`}>
+                <div className={`size-14 lg:size-20 flex justify-center items-center ${item.active ? 'text-white' : 'text-primary'}`} >
+                  {item.icon}</div>
+                <div className="space-y-2">
+                  <h2 className={`text-lg lg:text-xl font-semibold uppercase ${item.active ? 'text-white' : 'text-primary'}`}>{item.name}</h2>
+                  <p className={`text-sm lg:text-base ${item.active ? 'text-white/60' : 'text-black/60'}`}>
+                    {item.tagline}
+                  </p>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

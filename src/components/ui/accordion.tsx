@@ -1,60 +1,46 @@
-"use client";
+'use client'
+import { Minus, Plus } from 'lucide-react';
+import React from 'react'
+interface AccordionItem {
+    title: string;
+    content: string;
+  }
+  
+  interface AccordionProps {
+    items: AccordionItem[];
+  }
+const Accordion: React.FC<AccordionProps> = ({ items }) => {
+    const [openIndex, setOpenIndex] = React.useState<number | null>(null);
 
-import * as React from "react";
-import * as AccordionPrimitive from "@radix-ui/react-accordion";
-import { Plus } from "lucide-react";
+    const toggleAccordion = (index: number) => {
+      setOpenIndex(openIndex === index ? null : index);
+    };
+  return (
+    <div className=" ">
+      {items.map((item, index) => (
+        <div key={index} className={`lg:pl-10 p-5 ${openIndex === index ? 'rounded-md bg-white shadow-2 mb-10' : 'border-b border-black/10'}`}>
+          <button
+            className="flex-1 w-full flex focus:outline-none"
+            onClick={() => toggleAccordion(index)}
+          >
+            <div className="flex justify-between items-center text-left flex-1 gap-2 text-black/60">
+              <span className="font-semibold lg:text-xl">{item.title}</span>
+              <span>{openIndex === index ? 
+              <Minus strokeWidth={3} className='text-gray-600' />
+              : 
+              <Plus strokeWidth={3} className='text-gray-600' />
+              }</span>
+            </div>
+          </button>
+          {openIndex === index && (
+            <div className="pt-2 lg:pt-5">
+              <p className='text-black/50 leading-loose'>{item.content}</p>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  )
+}
 
-import { cn } from "@/lib/utils";
-
-const Accordion = AccordionPrimitive.Root;
-
-const AccordionItem = React.forwardRef<
-  React.ElementRef<typeof AccordionPrimitive.Item>,
-  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
->(({ className, ...props }, ref) => (
-  <AccordionPrimitive.Item
-    ref={ref}
-    className={cn("border-b", className)}
-    {...props}
-  />
-));
-AccordionItem.displayName = "AccordionItem";
-
-const AccordionTrigger = React.forwardRef<
-  React.ElementRef<typeof AccordionPrimitive.Trigger>,
-  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
->(({ className, children, ...props }, ref) => (
-  <AccordionPrimitive.Header className="flex">
-    <AccordionPrimitive.Trigger
-      ref={ref}
-      className={cn(
-        "flex flex-1 items-center justify-between py-4 text-sm font-medium transition-all hover:underline text-left [&[data-state=open]>svg]:rotate-180",
-        className
-      )}
-      {...props}
-    >
-      {children}
-      <Plus
-        strokeWidth={2.5}
-        className="shrink-0 text-black transition-transform duration-200"
-      />
-    </AccordionPrimitive.Trigger>
-  </AccordionPrimitive.Header>
-));
-AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
-
-const AccordionContent = React.forwardRef<
-  React.ElementRef<typeof AccordionPrimitive.Content>,
-  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
->(({ className, children, ...props }, ref) => (
-  <AccordionPrimitive.Content
-    ref={ref}
-    className="overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
-    {...props}
-  >
-    <div className={cn("pb-4 pt-0", className)}>{children}</div>
-  </AccordionPrimitive.Content>
-));
-AccordionContent.displayName = AccordionPrimitive.Content.displayName;
-
-export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
+export default Accordion
