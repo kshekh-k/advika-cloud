@@ -5,14 +5,14 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "https",
-        pathname: "**",
-        hostname: "**",
+        protocol: 'https',
+        pathname: '**',
+        hostname: '**',
       },
       {
-        protocol: "http",
-        pathname: "**",
-        hostname: "**",
+        protocol: 'http',
+        pathname: '**',
+        hostname: '**',
       },
     ],
   },
@@ -26,7 +26,6 @@ const nextConfig = {
       },
     },
   },
- 
 };
 
 export default nextConfig;

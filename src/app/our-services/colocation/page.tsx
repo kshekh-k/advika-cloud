@@ -1,12 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 function Colocation() {
-  return (
-    <div>
-     Colocation
-
-    </div>
-  )
+  return <div>Colocation</div>;
 }
 
-export default Colocation
+export default Colocation;

@@ -1,11 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 function Customized() {
-  return (
-    <div>
-      Customized Server
-    </div>
-  )
+  return <div>Customized Server</div>;
 }
 
-export default Customized
+export default Customized;

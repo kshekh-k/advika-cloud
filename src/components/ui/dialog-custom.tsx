@@ -3,8 +3,8 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
-} from "@/components/ui/dialog";
-import React from "react";
+} from '@/components/ui/dialog';
+import React from 'react';
 // import { Dialog as RadixDialog } from "@radix-ui/react-dialog";
 
 const DialogCustom = React.forwardRef<
@@ -18,8 +18,10 @@ const DialogCustom = React.forwardRef<
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent hideClose className={className}>
-        <DialogHeader className="pb-5">
-          <DialogTitle className=" text-2xl text-white font-semibold tracking-wider uppercase">{title || "App title here"}</DialogTitle>
+        <DialogHeader className='pb-5'>
+          <DialogTitle className='text-2xl font-semibold uppercase tracking-wider text-white'>
+            {title || 'App title here'}
+          </DialogTitle>
         </DialogHeader>
         {children}
       </DialogContent>
@@ -27,6 +29,6 @@ const DialogCustom = React.forwardRef<
   );
 });
 
-DialogCustom.displayName = "DialogCustom";
+DialogCustom.displayName = 'DialogCustom';
 
 export default DialogCustom;
