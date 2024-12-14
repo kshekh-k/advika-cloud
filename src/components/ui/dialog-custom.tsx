@@ -5,7 +5,6 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog';
 import React from 'react';
-// import { Dialog as RadixDialog } from "@radix-ui/react-dialog";
 
 const DialogCustom = React.forwardRef<
   React.ElementRef<typeof Dialog>,
@@ -13,8 +12,7 @@ const DialogCustom = React.forwardRef<
     title?: string;
     className?: string;
   }
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
->(({ open, onOpenChange, children, title, className }, ref) => {
+>(({ open, onOpenChange, children, title, className }) => {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent hideClose className={className}>
