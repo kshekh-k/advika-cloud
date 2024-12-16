@@ -1,3 +1,4 @@
+import { SortAscIcon } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
 import {
@@ -7,46 +8,44 @@ import {
   TbBrandYoutube,
   TbBrandWhatsapp,
 } from 'react-icons/tb';
-const social = [
-  {
-    icon: <TbBrandFacebook className='size-5' />,
-    name: 'facebook',
-    url: '#',
-  },
-  {
-    icon: <TbBrandX className='size-5' />,
-    name: 'x',
-    url: '#',
-  },
-  {
-    icon: <TbBrandBluesky className='size-5' />,
-    name: 'bluesky',
-    url: '#',
-  },
-  {
-    icon: <TbBrandYoutube className='size-5' />,
-    name: 'youtube',
-    url: '#',
-  },
-  {
-    icon: <TbBrandWhatsapp className='size-5' />,
-    name: 'whatsapp',
-    url: '#',
-  },
-];
-function Socialmedia() {
+const socialicons = [
+    {
+      icon: <TbBrandFacebook className="size-5" />,
+      name: 'facebook',
+      url: '#',
+    },
+    {
+      icon: <TbBrandX className="size-5" />,
+      name: 'x',
+      url: '#',
+    },
+    {
+      icon: <TbBrandBluesky className="size-5" />,
+      name: 'bluesky',
+      url: '#',
+    },
+    {
+      icon: <TbBrandYoutube className="size-5" />,
+      name: 'youtube',
+      url: '#',
+    },
+    {
+      icon: <TbBrandWhatsapp className="size-5" />,
+      name: 'whatsapp',
+      url: '#',
+    },
+  ]
+  type Social = {
+    className?:string
+  }
+const Socialmedia:React.FC<Social> = ({className}) => {
   return (
-    <>
-      {social.map((item, index) => (
-        <Link
-          key={index}
-          href={`${item.url}`}
-          title={item.name}
-          className={'text-white duration-200 ease-in-out hover:text-secondary'}
-        >
-          {item.icon}
-        </Link>
-      ))}
+  <>
+     {socialicons.map((item, index)=>
+    <Link key={index} href={`${item.url}`} title={item.name} className={`text-white hover:text-secondary ease-in-out duration-200 ${className}`}>
+    {item.icon}
+  </Link>
+    )}
     </>
   );
 }
