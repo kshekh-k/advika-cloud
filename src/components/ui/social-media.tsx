@@ -1,3 +1,4 @@
+import { SortAscIcon } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
 import {
@@ -7,7 +8,7 @@ import {
   TbBrandYoutube,
   TbBrandWhatsapp,
 } from 'react-icons/tb';
-const socialicon = [
+const socialicons = [
     {
       icon: <TbBrandFacebook className="size-5" />,
       name: 'facebook',
@@ -40,11 +41,11 @@ const socialicon = [
 const Socialmedia:React.FC<Social> = ({className}) => {
   return (
   <>
-    {socialicon.map((item, index) =>
-        <Link key={index} href={`${item.url}`} title={item.name} className={`text-white hover:text-secondary ease-in-out duration-200 ${className}`}>
-          {item.icon}
-        </Link>
-      ))}
+     {socialicons.map((item, index)=>
+    <Link key={index} href={`${item.url}`} title={item.name} className={`text-white hover:text-secondary ease-in-out duration-200 ${className}`}>
+    {item.icon}
+  </Link>
+    )}
     </>
   );
 }
