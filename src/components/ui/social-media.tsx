@@ -7,7 +7,7 @@ import {
   TbBrandYoutube,
   TbBrandWhatsapp,
 } from 'react-icons/tb';
-const social = [
+const socialicon = [
     {
       icon: <TbBrandFacebook className="size-5" />,
       name: 'facebook',
@@ -40,7 +40,7 @@ const social = [
 const Socialmedia:React.FC<Social> = ({className}) => {
   return (
   <>
-    {social.map((item, index) =>
+    {socialicon.map((item, index) =>
         <Link key={index} href={`${item.url}`} title={item.name} className={`text-white hover:text-secondary ease-in-out duration-200 ${className}`}>
           {item.icon}
         </Link>
