@@ -1,9 +1,9 @@
-'use client'
-import React  from 'react'; 
+'use client';
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/pagination'; 
+import 'swiper/css/pagination';
 import { Quoteicon } from '@/icons';
 // const testimonies = [
 //   {
@@ -19,22 +19,18 @@ import { Quoteicon } from '@/icons';
 // ]
 export default function Testimonials() {
   return (
-    <div className="container">
+    <div className='container'>
       {/* Testimonials */}
-      <h2 className="text-3xl lg:text-5xl font-bold text-primary text-center leading-snug">
+      <h2 className='text-center text-3xl font-bold leading-snug text-primary lg:text-5xl'>
         What Customers Say?
-
-        <span className="text-black/60 block">
-          Testimonials
-        </span>
+        <span className='block text-black/60'>Testimonials</span>
       </h2>
-      <div className="pt-5 lg:pt-16">
-
+      <div className='pt-5 lg:pt-16'>
         <Swiper
           slidesPerView={1}
           spaceBetween={30}
-          pagination={false}     
-          autoplay={true}    
+          pagination={false}
+          autoplay={true}
           breakpoints={{
             640: {
               slidesPerView: 1,
@@ -44,35 +40,29 @@ export default function Testimonials() {
               slidesPerView: 2,
               spaceBetween: 40,
             },
-             
-          }} 
-          className="mySwiper"
-
+          }}
+          className='mySwiper'
         >
-          
           <SwiperSlide>
-
-            <div className="rounded-lg bg-primary/5 p-5 lg:p-10 space-y-3">
-              <div className="bg-white p-5 lg:p-10 rounded border border-primary/50 relative">
-              <Quoteicon className="size-16 text-primary/5 absolute left-5 top-5" />
-                <p className="italic text-black/60 leading-loose lg:leading-loose lg:text-xl relative z-10">
-                  Advika Web Hosting is a reliable and affordable hosting solution
-                  provider The customer support team is very strong and gives us
-                  quick solutions. I am using VPS server for more than 7 years.
+            <div className='space-y-3 rounded-lg bg-primary/5 p-5 lg:p-10'>
+              <div className='relative rounded border border-primary/50 bg-white p-5 lg:p-10'>
+                <Quoteicon className='absolute left-5 top-5 size-16 text-primary/5' />
+                <p className='relative z-10 italic leading-loose text-black/60 lg:text-xl lg:leading-loose'>
+                  Advika Web Hosting is a reliable and affordable hosting
+                  solution provider The customer support team is very strong and
+                  gives us quick solutions. I am using VPS server for more than
+                  7 years.
                 </p>
               </div>
-              <div className="space-y-1 pt-3">
-                <h4 className="text-black/70 text-xl font-semibold">John Doe</h4>
-                <p className="text-black/50 text-lg">CEO, Company Name</p>
+              <div className='space-y-1 pt-3'>
+                <h4 className='text-xl font-semibold text-black/70'>
+                  John Doe
+                </h4>
+                <p className='text-lg text-black/50'>CEO, Company Name</p>
               </div>
             </div>
-
           </SwiperSlide>
-         
-
         </Swiper>
-
- 
       </div>
     </div>
   );

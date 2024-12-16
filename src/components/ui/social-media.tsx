@@ -1,6 +1,12 @@
 import Link from 'next/link';
-import React from 'react'
-import { TbBrandFacebook, TbBrandX, TbBrandBluesky, TbBrandYoutube, TbBrandWhatsapp } from "react-icons/tb";
+import React from 'react';
+import {
+  TbBrandFacebook,
+  TbBrandX,
+  TbBrandBluesky,
+  TbBrandYoutube,
+  TbBrandWhatsapp,
+} from 'react-icons/tb';
 const social = [
     {
       icon: <TbBrandFacebook className="size-5" />,
@@ -38,9 +44,9 @@ const Socialmedia:React.FC<Social> = ({className}) => {
         <Link key={index} href={`${item.url}`} title={item.name} className={`text-white hover:text-secondary ease-in-out duration-200 ${className}`}>
           {item.icon}
         </Link>
-      )}
-      </>
-  )
+      ))}
+    </>
+  );
 }
 
-export default Socialmedia
+export default Socialmedia;

@@ -1,11 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 function Cloudserver() {
-  return (
-    <div>
-      Cloud Server
-    </div>
-  )
+  return <div>Cloud Server</div>;
 }
 
-export default Cloudserver
+export default Cloudserver;

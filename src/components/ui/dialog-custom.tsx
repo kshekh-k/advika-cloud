@@ -3,9 +3,8 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
-} from "@/components/ui/dialog";
-import React from "react";
-// import { Dialog as RadixDialog } from "@radix-ui/react-dialog";
+} from '@/components/ui/dialog';
+import React from 'react';
 
 const DialogCustom = React.forwardRef<
   React.ElementRef<typeof Dialog>,
@@ -13,13 +12,14 @@ const DialogCustom = React.forwardRef<
     title?: string;
     className?: string;
   }
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
->(({ open, onOpenChange, children, title, className }, ref) => {
+>(({ open, onOpenChange, children, title, className }) => {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent hideClose className={className}>
-        <DialogHeader className="pb-5">
-          <DialogTitle className=" text-2xl text-white font-semibold tracking-wider uppercase">{title || "App title here"}</DialogTitle>
+        <DialogHeader className='pb-5'>
+          <DialogTitle className='text-2xl font-semibold uppercase tracking-wider text-white'>
+            {title || 'App title here'}
+          </DialogTitle>
         </DialogHeader>
         {children}
       </DialogContent>
@@ -27,6 +27,6 @@ const DialogCustom = React.forwardRef<
   );
 });
 
-DialogCustom.displayName = "DialogCustom";
+DialogCustom.displayName = 'DialogCustom';
 
 export default DialogCustom;

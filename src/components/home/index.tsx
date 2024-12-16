@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import HomeIntro from './intro';
 import HomeFeatures from './features';
 import AdvikaGlobalReach from './advika-global-reach';
@@ -7,7 +7,7 @@ import HomeWhyAdvika from './why-advika';
 import HomeAchievements from './achievements';
 import ContactForm from '@/components/partials/contact-form';
 import Testimonials from '@/components/partials/testimonials';
-import Faqs from '@/components/partials/faqs'; 
+import Faqs from '@/components/partials/faqs';
 import DialogCustom from '@/components/ui/dialog-custom';
 import Formcontact from '@/components/partials/form';
 import Layout from '@/components/layout';
@@ -25,7 +25,7 @@ function HomeComponent() {
   return (
     <>
       <Layout>
-        <div className='flex flex-col flex-1 w-full'>
+        <div className='flex w-full flex-1 flex-col'>
           <HomeIntro onContactClick={openContactDialog} />
           <HomeFeatures />
           <AdvikaGlobalReach />
@@ -34,25 +34,24 @@ function HomeComponent() {
           <HomeAchievements />
           <ContactForm />
           {/* Testimonials & Faq */}
-          <section className="bg-light py-10 lg:py-16 2xl:py-24 space-y-10 lg:space-y-16 2xl:space-y-24">
-            <Testimonials />             
+          <section className='space-y-10 bg-light py-10 lg:space-y-16 lg:py-16 2xl:space-y-24 2xl:py-24'>
+            <Testimonials />
             <Faqs />
           </section>
         </div>
       </Layout>
 
-
       {/* Contact Dialog */}
-      <DialogCustom open={openDialog} onOpenChange={onDialogOpenChange} className="max-w-3xl bg-primary p-5" title="fill your details">
-
-
+      <DialogCustom
+        open={openDialog}
+        onOpenChange={onDialogOpenChange}
+        className='max-w-3xl bg-primary p-5'
+        title='fill your details'
+      >
         <Formcontact />
-
-
       </DialogCustom>
-
     </>
-  )
+  );
 }
 
-export default HomeComponent
+export default HomeComponent;

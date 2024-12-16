@@ -29,48 +29,52 @@ function Formcontact() {
     // };
   return (
     <div className='relative'>
-        <form>
-    <div className="flex flex-col gap-5">
-    <input
-      type="text"
-      className="bg-white/10 p-5 rounded-md placeholder:text-white outline-none focus:bg-white/20 ease-in-out duration-200"
-      placeholder="Full Name"
-    />
-    <input
-      type="email"
-      className="bg-white/10 p-5 rounded-md placeholder:text-white outline-none focus:bg-white/20 ease-in-out duration-200"
-      placeholder="Email Address"
-    />
-    <div className="flex flex-col sm:grid sm:grid-cols-2 gap-5">
-      <input
-        type="tel"
-        className="w-full bg-white/10 p-5 rounded-md placeholder:text-white outline-none focus:bg-white/20 ease-in-out duration-200"
-        placeholder="Phone Number"
-      />
-      <input
-        type="url"
-        className="w-full bg-white/10 p-5 rounded-md placeholder:text-white outline-none focus:bg-white/20 ease-in-out duration-200"
-        placeholder="Website"
-      />
-    </div>
-    <textarea
-      className="bg-white/10 p-5 rounded-md placeholder:text-white outline-none focus:bg-white/20 ease-in-out duration-200"
-      rows={10}
-      placeholder="Your message"
-    ></textarea>
-    <div className="flex justify-end">
-      {/* <ReCAPTCHA
+      <form>
+        <div className='flex flex-col gap-5'>
+          <input
+            type='text'
+            className='rounded-md bg-white/10 p-5 outline-none duration-200 ease-in-out placeholder:text-white focus:bg-white/20'
+            placeholder='Full Name'
+          />
+          <input
+            type='email'
+            className='rounded-md bg-white/10 p-5 outline-none duration-200 ease-in-out placeholder:text-white focus:bg-white/20'
+            placeholder='Email Address'
+          />
+          <div className='flex flex-col gap-5 sm:grid sm:grid-cols-2'>
+            <input
+              type='tel'
+              className='w-full rounded-md bg-white/10 p-5 outline-none duration-200 ease-in-out placeholder:text-white focus:bg-white/20'
+              placeholder='Phone Number'
+            />
+            <input
+              type='url'
+              className='w-full rounded-md bg-white/10 p-5 outline-none duration-200 ease-in-out placeholder:text-white focus:bg-white/20'
+              placeholder='Website'
+            />
+          </div>
+          <textarea
+            className='rounded-md bg-white/10 p-5 outline-none duration-200 ease-in-out placeholder:text-white focus:bg-white/20'
+            rows={10}
+            placeholder='Your message'
+          ></textarea>
+          <div className='flex justify-end'>
+            {/* <ReCAPTCHA
         sitekey="YOUR_SITE_KEY"
         onChange={handleCaptchaChange}
       /> */}
-      <Button variant={"white"} size={"lg"} className="uppercase !py-5 font-semibold text-lg hover:text-white hover:bg-secondary ease-in-out duration-200">
-        Book Now
-      </Button>
+            <Button
+              variant={'white'}
+              size={'lg'}
+              className='!py-5 text-lg font-semibold uppercase duration-200 ease-in-out hover:bg-secondary hover:text-white'
+            >
+              Book Now
+            </Button>
+          </div>
+        </div>
+      </form>
     </div>
-  </div>
-  </form>
-  </div>
-  )
+  );
 }
 
-export default Formcontact
+export default Formcontact;
