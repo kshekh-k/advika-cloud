@@ -3,33 +3,9 @@ import Image from "next/image";
 import { TbMail, TbPhoneCall } from 'react-icons/tb';
 import Link from 'next/link';
 import Formcontact from './form';
-// import ReCAPTCHA from "react-google-recaptcha";
+
 export default function ContactForm() {
-  // const [captchaToken, setCaptchaToken] = React.useState<string | null>(null);
-  // const handleCaptchaChange = (token: string | null) => {
-  //   setCaptchaToken(token);
-  // };
-  // const handleSubmit = async (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   if (!captchaToken) {
-  //     alert("Please complete the CAPTCHA");
-  //     return;
-  //   }
-
-  //   const response = await fetch("/api/verify-captcha", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify({ captchaToken }),
-  //   });
-
-  //   const result = await response.json();
-
-  //   if (result.success) {
-  //     alert("Form submitted successfully!");
-  //   } else {
-  //     alert("CAPTCHA verification failed!");
-  //   }
-  // };
+  
   return (
     <section className="bg-primary text-white py-10 lg:py-16 2xl:py-24 ">
       <div className="container">

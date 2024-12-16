@@ -1,7 +1,32 @@
 import React from 'react'
 import { Button } from '../ui/button'
-
+// import ReCAPTCHA from "react-google-recaptcha";
 function Formcontact() {
+  // const [captchaToken, setCaptchaToken] = React.useState<string | null>(null);
+    // const handleCaptchaChange = (token: string | null) => {
+    //   setCaptchaToken(token);
+    // };
+    // const handleSubmit = async (e: React.FormEvent) => {
+    //   e.preventDefault();
+    //   if (!captchaToken) {
+    //     alert("Please complete the CAPTCHA");
+    //     return;
+    //   }
+  
+    //   const response = await fetch("/api/verify-captcha", {
+    //     method: "POST",
+    //     headers: { "Content-Type": "application/json" },
+    //     body: JSON.stringify({ captchaToken }),
+    //   });
+  
+    //   const result = await response.json();
+  
+    //   if (result.success) {
+    //     alert("Form submitted successfully!");
+    //   } else {
+    //     alert("CAPTCHA verification failed!");
+    //   }
+    // };
   return (
     <div className='relative'>
         <form>

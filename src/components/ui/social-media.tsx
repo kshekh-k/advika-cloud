@@ -28,11 +28,14 @@ const social = [
       url: '#',
     },
   ]
-function Socialmedia() {
+  type Social = {
+    className?:string
+  }
+const Socialmedia:React.FC<Social> = ({className}) => {
   return (
   <>
     {social.map((item, index) =>
-        <Link key={index} href={`${item.url}`} title={item.name} className={'text-white hover:text-secondary ease-in-out duration-200'}>
+        <Link key={index} href={`${item.url}`} title={item.name} className={`text-white hover:text-secondary ease-in-out duration-200 ${className}`}>
           {item.icon}
         </Link>
       )}
