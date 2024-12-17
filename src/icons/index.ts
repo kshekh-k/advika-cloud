@@ -14,3 +14,7 @@ export { default as Cloudupicon } from './svgs/cloud-up';
 export { default as Badgeicon } from './svgs/badge';
 export { default as Staricon } from './svgs/star';
 export { default as Quoteicon } from './svgs/quote';
+export { default as Support24x7icon } from './svgs/supprt-24x7';
+export { default as Agreementicon } from './svgs/agreement';
+export { default as Managericon } from './svgs/manager';
+export { default as Awardbadgeicon } from './svgs/award-badge';

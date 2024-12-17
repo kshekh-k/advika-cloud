@@ -26,13 +26,15 @@ const Accordion: React.FC<AccordionProps> = ({ items }) => {
             className='flex w-full flex-1 focus:outline-none'
             onClick={() => toggleAccordion(index)}
           >
-            <div className='flex flex-1 items-center justify-between gap-2 text-left text-black/60'>
-              <span className='font-semibold lg:text-xl'>{item.title}</span>
+            <div className='flex flex-1 items-center justify-between gap-2 text-left text-black/60 ease-in-out duration-200 hover:text-primary'>
+              <span className='flex flex-1 gap-2'>
+                <span className='font-semibold lg:text-xl w-10 shrink-0'>{String(index + 1).padStart(2, '0')}.</span><span className='font-semibold lg:text-xl'>{item.title}</span>
+              </span>
               <span>
                 {openIndex === index ? (
-                  <Minus strokeWidth={3} className='text-gray-600' />
+                  <Minus strokeWidth={3} />
                 ) : (
-                  <Plus strokeWidth={3} className='text-gray-600' />
+                  <Plus strokeWidth={3} />
                 )}
               </span>
             </div>

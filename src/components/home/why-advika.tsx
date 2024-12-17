@@ -61,7 +61,7 @@ export default function HomeWhyAdvika({ onContactClick }: Props) {
           height={400}
         />
         <div className='container relative'>
-          <h2 className='text-3xl font-bold leading-normal text-secondary lg:text-5xl'>
+          <h2 className='text-3xl font-bold leading-normal lg:leading-normal text-secondary lg:text-5xl'>
             Why Advika
             <span className='block text-white'>
               Explore Our Impressive Stats!
