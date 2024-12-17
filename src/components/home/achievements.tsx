@@ -96,7 +96,7 @@ export default function HomeAchievements() {
   return (
     <section className='bg-black/5 py-10 lg:py-16 2xl:py-24'>
       <div className='container'>
-        <h2 className='text-center text-3xl font-bold capitalize text-primary lg:text-5xl'>
+        <h2 className='text-center text-3xl font-bold capitalize text-primary lg:leading-snug lg:text-5xl'>
           Our Achievements
         </h2>
         <div className='mt-8 flex flex-col gap-10 xl:mt-16'>

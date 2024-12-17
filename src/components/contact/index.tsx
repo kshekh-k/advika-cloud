@@ -6,6 +6,7 @@ import Image from 'next/image'
 import {TbMail, TbMapPin, TbPhoneCall } from "react-icons/tb";
 import Link from 'next/link'
 import Socialmedia from '../ui/social-media'
+ 
 
 function ContactComponent() {
   return (
@@ -34,7 +35,7 @@ function ContactComponent() {
                 </div>
                 <div className='flex gap-3'>
                   <div className='flex justify-center text-black/60 pt-1'> <TbPhoneCall className="size-6 shrink-0" /></div>
-                   <p className="text-black/60 hover:text-primary font-medium leading-loose ease-in-out duration-200"><Link href="tel:+91-99502-49491">+91-99502-49491</Link></p>
+                   <p className="text-black/60 hover:text-primary font-medium leading-loose ease-in-out duration-200"><Link href="tel:+919950249491">+91-99502-49491</Link></p>
                 </div>
                 <div className='flex gap-3'>
                   <div className='flex justify-center text-black/60 pt-1'> <TbMail className="size-6 shrink-0" /></div>
@@ -51,7 +52,9 @@ function ContactComponent() {
             </div>
           </div>
         </div>
+        
       </section>
+    
     </Layout>
   )
 }

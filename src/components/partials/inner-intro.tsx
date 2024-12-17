@@ -6,8 +6,9 @@ type intro = {
   descp?: string;
   thumb?: string;
   thumbAlt?: string;
+  thumbClass?: string;
 }
-const Innerintro:React.FC<intro> = ({headingUpline, heading, descp, thumb, thumbAlt}) => {
+const Innerintro:React.FC<intro> = ({headingUpline, heading, descp, thumb, thumbAlt, thumbClass}) => {
   return (
     <section className='bg-primary relative lg:min-h-[485px] overflow-hidden flex items-center'>
        <div className="flex justify-end items-center absolute inset-0">
@@ -26,7 +27,7 @@ const Innerintro:React.FC<intro> = ({headingUpline, heading, descp, thumb, thumb
                       alt={`${thumbAlt}`}
                       width={445}
                       height={445}
-                      className="object-cover aspect-sqares"
+                      className={`${thumbClass ? thumbClass : 'object-cover aspect-sqares'}`}
                     /></div>
                   </div>
                 </div>
