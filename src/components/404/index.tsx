@@ -1,11 +1,20 @@
 'use client'
-import LottieReact from '@lottielab/lottie-player/react'
+// import LottieReact from '@lottielab/lottie-player/react'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { TbArrowNarrowLeft } from 'react-icons/tb'
-
+import dynamic from 'next/dynamic';
+import Advika404 from './advika-404.json';
+const LottieReact = dynamic(() => import('lottie-react'), { ssr: false });
 function Page404() {
+    const [isClient, setIsClient] = React.useState(false);
+
+    React.useEffect(() => {
+      setIsClient(true); // Ensures this runs only on the client
+    }, []);
+  
+    if (!isClient) return null; // Prevents rendering on the server
     return (
         <div className="w-full bg-primary h-screen flex flex-col  items-center justify-center ">
             <div className='relative opacity-5'>
@@ -13,7 +22,8 @@ function Page404() {
             </div>
             <div className="w-full flex-1  flex justify-center items-center text-center px-5 relative z-10">
                 <div className='max-w-xl flex flex-col items-center justify-center'>
-                    <LottieReact src="/images/advika-404.json" autoplay />
+                    {/* <LottieReact src="/images/advika-404.json" autoplay /> */}
+                    <LottieReact animationData={Advika404} />
                     <div className=''>
                         <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-wider text-white uppercase border-y border-white/10 mt-10 py-5">
                             Page <span className='text-secondary'>Not</span> Found

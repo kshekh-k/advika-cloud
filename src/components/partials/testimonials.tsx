@@ -54,7 +54,7 @@ export default function Testimonials() {
           className='mySwiper'
         >
           {testimonies.map((item,index)=>
-          <SwiperSlide>
+          <SwiperSlide key={index}>
             <div className='space-y-3 rounded-lg bg-primary/5 p-5 lg:p-10'>
               <div className='relative rounded border border-primary/50 bg-white p-5 lg:p-10'>
                 <Quoteicon className='absolute left-5 top-5 size-16 text-primary/5' />
