@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import React from 'react';
 import { usePathname } from 'next/navigation';
-import { TbChevronDown, TbMenu2, TbX } from 'react-icons/tb';
+import {TbMenu2, TbX } from 'react-icons/tb';
 import Socialmedia from './social-media';
 const mainmenu = [
   {
