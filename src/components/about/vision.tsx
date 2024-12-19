@@ -9,14 +9,14 @@ function Vision() {
           <div className='md:col-span-6'>
             <div className='flex flex-col gap-5'>
               <h2 className='text-3xl font-bold leading-normal text-primary lg:text-5xl lg:leading-normal'>
-                Advika's Vision
+                Advika&apos;s Vision
               </h2>
               <div className='space-y-5'>
                 <p className='font-medium leading-loose text-black/60'>
-                  Join us at Advika Cloud, where hosting excellence meets unwavering commitment. Let's embark on a journey to elevate your online presence and propel your success in the digital realm.
+                  Join us at Advika Cloud, where hosting excellence meets unwavering commitment. Let&apos;s embark on a journey to elevate your online presence and propel your success in the digital realm.
                 </p>
                 <p className='leading-loose text-black/60'>
-                  Advika Cloud envisions a digital landscape where web hosting is not just a service but an experience. We aspire to be the catalysts behind our clients' online success stories, empowering them with the tools and support needed to achieve their goals.
+                  Advika Cloud envisions a digital landscape where web hosting is not just a service but an experience. We aspire to be the catalysts behind our clients&apos; online success stories, empowering them with the tools and support needed to achieve their goals.
 
                 </p>
 

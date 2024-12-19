@@ -21,7 +21,7 @@ function About() {
             Explore the wide variety of web hosting services offered by Advika. From cheap shared hosting to powerful dedicated servers, Advika perfectly meets every hosting need.
           </p>
           <p className='leading-loose text-black/60'>
-            Whether you are a new blogger, a small business, or a large business, Advika's solution is suitable for you. Reliability, and security, With Advika is committed to hosting your website online and around the clock.
+            Whether you are a new blogger, a small business, or a large business, Advika&apos;s solution is suitable for you. Reliability, and security, With Advika is committed to hosting your website online and around the clock.
           </p>
           <p className='leading-loose text-black/60'>
             Their easy-to-use control panels make your hosting administration effortless, and their thoughtful customer support team is always there to help you expand your website No matter the shape, Advika has the resources and experience to back it up Find hosting plans today and find comfort and peace of mind which Advika gives you.
