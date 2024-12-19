@@ -31,7 +31,7 @@ const accordionItems = [
 
 export default function Faqs() {
   return (
-    <div className='container'>
+    <div className='container' id='faq'>
       {/* FAQs */}
       <h2 className='text-center text-3xl font-bold text-primary lg:text-5xl'>
         Frequently Asked Queries

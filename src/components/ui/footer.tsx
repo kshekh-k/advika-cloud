@@ -13,34 +13,18 @@ const AboutCompany = [
   },
   {
     label: 'Services',
-    link: '/',
-  },
-  {
-    label: 'Contact Us',
-    link: '/',
-  },
-  {
-    label: 'Book a Call',
-    link: '/',
-  },
+    link: '/our-services',
+  }, 
 ];
 const HelpSupport = [
   {
     label: 'FAQs',
-    link: '/',
-  },
-  {
-    label: 'Sitemap',
-    link: '/',
-  },
+    link: '/#faq',
+  }, 
   {
     label: 'Contact us',
-    link: '/',
-  },
-  {
-    label: 'Career',
-    link: '/',
-  },
+    link: '/contact',
+  }, 
   {
     label: 'Terms of Services',
     link: '/',

@@ -15,6 +15,7 @@ function Page404() {
     }, []);
   
     if (!isClient) return null; // Prevents rendering on the server
+    
     return (
         <div className="w-full bg-primary h-screen flex flex-col  items-center justify-center ">
             <div className='relative opacity-5'>

@@ -1,0 +1,46 @@
+import Image from 'next/image'
+import React from 'react'
+
+function Vision() {
+  return (
+    <section className='py-10 lg:py-16 2xl:py-32 bg-black/5 mt-10 lg:mt-16 2xl:mt-20'>
+      <div className='container'>
+        <div className='flex flex-col md:grid md:grid-cols-12 gap-5 xl:gap-14 items-start xl:items-center'>
+          <div className='md:col-span-6'>
+            <div className='flex flex-col gap-5'>
+              <h2 className='text-3xl font-bold leading-normal text-primary lg:text-5xl lg:leading-normal'>
+                Advika's Vision
+              </h2>
+              <div className='space-y-5'>
+                <p className='font-medium leading-loose text-black/60'>
+                  Join us at Advika Cloud, where hosting excellence meets unwavering commitment. Let's embark on a journey to elevate your online presence and propel your success in the digital realm.
+                </p>
+                <p className='leading-loose text-black/60'>
+                  Advika Cloud envisions a digital landscape where web hosting is not just a service but an experience. We aspire to be the catalysts behind our clients' online success stories, empowering them with the tools and support needed to achieve their goals.
+
+                </p>
+
+                <h3 className='text-3xl font-bold leading-normal text-primary uppercase  pt-3'>
+                  OUR APPROACH
+                </h3>
+                <p className='leading-loose text-black/60'>
+                  <b>Customer-Centric Philosophy:</b> We believe in forging lasting relationships with our clients. Our customer-centric approach means we listen attentively, understand thoroughly, and provide tailored solutions that exceed expectations.
+                </p>
+                <p className='leading-loose text-black/60'>
+                  <b>Innovation and Adaptability: </b> Innovation is ingrained in our DNA. We continually evolve our services to embrace the latest technological advancements, ensuring that our clients have access to the best-in-class hosting solutions.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className='md:col-span-6 w-full md:w-auto'>
+            <div className='w-full bg-black/5 flex justify-center overflow-hidden'>
+              <Image src={`/images/about-us.png`} alt={`about-us`} width={600} height={600} className={`'aspect-squares w-full h-auto`} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default Vision

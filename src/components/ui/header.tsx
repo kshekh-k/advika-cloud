@@ -45,7 +45,7 @@ function Header() {
         <div className='bg-white text-primary'>
           <nav className='container'>
             <div className='flex justify-between'>
-              <div className='py-4'>
+              <Link href="/" className='py-4'>
                 <Image
                   src={'/svg/advika-logo.svg'}
                   alt='Advika Cloud'
@@ -53,7 +53,7 @@ function Header() {
                   height={45}
                   className='h-auto w-20 sm:w-32 lg:w-40 xl:w-auto'
                 />
-              </div>
+              </Link>
               <Menu />
               <Button
                 onClick={openContactDialog}
