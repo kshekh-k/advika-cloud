@@ -23,9 +23,9 @@ const services = [
     descrp: 'Performance review on a quarterly basis, so that we can work towards improvement of our products & services for each quarter'
   },
 ]
-function Smartservices() {
+function Smartservices({className}:{className?:string}) {
   return (
-    <section className='py-10 lg:py-16 2xl:py-24 bg-black/5'>
+    <section className={`py-10 lg:py-16 2xl:py-24 ${className}`}>
       <div className='container'>
         <div className='flex-col-reverse flex md:grid md:grid-cols-12 gap-5 items-start'>
           <div className='md:col-span-8 lg:col-span-6'>
