@@ -24,11 +24,11 @@ function Header() {
         <div className='container flex items-center justify-between py-2.5'>
           <div className='flex flex-1 flex-wrap items-center justify-between gap-x-5 gap-y-2 sm:flex-auto sm:justify-start sm:divide-x sm:divide-white/50'>
             <Link
-              href={'tel:+919950249491'}
+              href={'tel:+919829714343'}
               className='flex items-center text-[10px] text-white sm:gap-2 sm:text-sm'
             >
               <TbPhoneCall className='hidden size-4 sm:inline-block' />
-              +91-99502-49491
+              +91-98297-14343
             </Link>
             <Link
               href={'mailto:eb.sales@advika.cloud'}

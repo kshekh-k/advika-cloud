@@ -9,7 +9,7 @@ const AboutCompany = [
   },
   {
     label: 'About Us',
-    link: '/',
+    link: '/about',
   },
   {
     label: 'Services',
@@ -99,11 +99,11 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href='tel:+919950249491'
+                  href='tel:+919829714343'
                   className='flex items-center gap-2 text-white/70 duration-200 ease-in-out hover:text-secondary'
                 >
                   <TbPhoneCall className='size-5 shrink-0' />
-                  <span>+91-99502-49491</span>
+                  <span>+91-98297-14343</span>
                 </Link>
               </li>
               <li>

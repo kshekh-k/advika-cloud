@@ -3,7 +3,7 @@ import React from 'react'
 const stats = [
     {
       icon: <Companyicon className='size-7' />,
-      value: '15000+',
+      value: '3500+',
       tagline: 'Trusted EB Customers',
  
     },
@@ -21,7 +21,7 @@ const stats = [
     },
     {
       icon: <Staricon className='size-7' />,
-      value: '4.5',
+      value: '4.7',
       tagline: 'Ratings at Google',
     
     },
