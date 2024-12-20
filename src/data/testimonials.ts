@@ -1,42 +1,12 @@
 export const TESTIMONIALS = [
   {
-    id: 1,
-    name: 'John Doe',
-    title: 'CEO',
-    photo: 'https://randomuser.me/api/portraits/men/1.jpg',
-    comment:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac justo nec nunc ultrices.',
+    quote: 'Advika offers reliable and affordable hosting solutions. They provide excellent uptime, fast loading speeds, and responsive customer support. They are known for their professionalism, expertise, and timely solutions. Overall, Advika is a recommended choice for individuals and small businesses looking for a web hosting service.',
+    name: 'Kamal Gupta',
+    location: 'Jaipur'
   },
   {
-    id: 2,
-    name: 'Jane Doe',
-    title: 'CTO',
-    photo: 'https://randomuser.me/api/portraits/men/2.jpg',
-    comment:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac justo nec nunc ultrices.',
-  },
-  {
-    id: 3,
-    name: 'John Smith',
-    title: 'COO',
-    photo: 'https://randomuser.me/api/portraits/men/3.jpg',
-    comment:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac justo nec nunc ultrices.',
-  },
-  {
-    id: 4,
-    name: 'Jane Smith',
-    title: 'CFO',
-    photo: 'https://randomuser.me/api/portraits/men/4.jpg',
-    comment:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac justo nec nunc ultrices.',
-  },
-  {
-    id: 5,
-    name: 'John Doe',
-    title: 'CEO',
-    photo: 'https://randomuser.me/api/portraits/men/5.jpg',
-    comment:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac justo nec nunc ultrices.',
+    quote: 'Advika Web Hosting is a reliable and affordable hosting solution provider The customer support team is very strong and gives us quick solutions. I am  using VPS server for more than 7 years.',
+    name: 'Abhishek Singh',
+    location: 'Gurugram'
   },
 ];

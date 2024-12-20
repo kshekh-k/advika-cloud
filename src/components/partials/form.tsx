@@ -1,74 +1,129 @@
+'use client'
 import React from 'react'
 import { Button } from '../ui/button'
-// import ReCAPTCHA from "react-google-recaptcha";
+import ReCAPTCHA from "react-google-recaptcha";
+import { FormSubmit } from "@/app/api/forms/route";
+import { toast } from "react-toastify";
+
 function Formcontact() {
-  // const [captchaToken, setCaptchaToken] = React.useState<string | null>(null);
-    // const handleCaptchaChange = (token: string | null) => {
-    //   setCaptchaToken(token);
-    // };
-    // const handleSubmit = async (e: React.FormEvent) => {
-    //   e.preventDefault();
-    //   if (!captchaToken) {
-    //     alert("Please complete the CAPTCHA");
-    //     return;
-    //   }
-  
-    //   const response = await fetch("/api/verify-captcha", {
-    //     method: "POST",
-    //     headers: { "Content-Type": "application/json" },
-    //     body: JSON.stringify({ captchaToken }),
-    //   });
-  
-    //   const result = await response.json();
-  
-    //   if (result.success) {
-    //     alert("Form submitted successfully!");
-    //   } else {
-    //     alert("CAPTCHA verification failed!");
-    //   }
-    // };
+  const [loading, setLoading] = React.useState(false);
+  const [name, setName] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [contact, setContact] = React.useState("");
+  const [website, setWebsite] = React.useState("");
+  const [message, setMessage] = React.useState("");
+
+  const [captchaToken, setCaptchaToken] = React.useState<string | null>(null);
+  const handleCaptchaChange = (token: string | null) => {
+    setCaptchaToken(token);
+  };
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!captchaToken) {
+      alert("Please complete the CAPTCHA");
+      return;
+    }
+
+    const captcha = await fetch("/api/captcha", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ token: captchaToken }),
+    });
+
+    const result = await captcha.json();
+
+    if (result.success) {
+      alert("Form submitted successfully!");
+    } else {
+      alert("CAPTCHA verification failed!");
+    }
+
+    setLoading(true);
+    const data: FormSubmit = {
+      name,
+      email,
+      website,
+      message,
+      contact: `'${contact}'`,
+
+    };
+
+    const res = await fetch("/api/forms", {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+      body: JSON.stringify(data),
+    });
+
+    setLoading(false);
+    const response = await res.json();
+
+    if (!res.ok || response.error) {
+      toast.error("Failed to send");
+      return;
+    }
+
+    toast.success("Thank you for your information. We shall contact you shortly.");
+    setName("");
+    setEmail("");
+    setContact("");
+    setWebsite("");
+    setMessage("");
+  };
   return (
     <div className='relative'>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className='flex flex-col gap-5'>
           <input
             type='text'
             className='rounded-md bg-white/10 p-5 outline-none duration-200 ease-in-out placeholder:text-white focus:bg-white/20'
             placeholder='Full Name'
+            onChange={(e) => setName(e.target.value)}
+            value={name}
           />
           <input
             type='email'
             className='rounded-md bg-white/10 p-5 outline-none duration-200 ease-in-out placeholder:text-white focus:bg-white/20'
             placeholder='Email Address'
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
           />
           <div className='flex flex-col gap-5 sm:grid sm:grid-cols-2'>
             <input
               type='tel'
               className='w-full rounded-md bg-white/10 p-5 outline-none duration-200 ease-in-out placeholder:text-white focus:bg-white/20'
               placeholder='Phone Number'
+              onChange={(e) => setContact(e.target.value)}
+              value={contact}
             />
             <input
               type='url'
               className='w-full rounded-md bg-white/10 p-5 outline-none duration-200 ease-in-out placeholder:text-white focus:bg-white/20'
               placeholder='Website'
+              onChange={(e) => setWebsite(e.target.value)}
+              value={website}
             />
           </div>
           <textarea
             className='rounded-md bg-white/10 p-5 outline-none duration-200 ease-in-out placeholder:text-white focus:bg-white/20'
             rows={10}
             placeholder='Your message'
+            onChange={(e) => setMessage(e.target.value)}
+            value={message}
           ></textarea>
-          <div className='flex justify-end'>
-            {/* <ReCAPTCHA
-        sitekey="YOUR_SITE_KEY"
-        onChange={handleCaptchaChange}
-      /> */}
-            <Button
+          <div className='flex justify-between gap-5 flex-wrap items-stretch'>
+
+            <ReCAPTCHA
+              sitekey={`${process.env.NEXt_PUBLIC_CAPTCHA_SITE_KEY}` || ""}
+              onChange={handleCaptchaChange}
+            />
+            <Button type="submit"
               variant={'white'}
               size={'lg'}
-              className='!py-5 text-lg font-semibold uppercase duration-200 ease-in-out hover:bg-secondary hover:text-white'
+              className='!py-5 text-lg h-full w-60 font-semibold uppercase duration-200 ease-in-out hover:bg-secondary hover:text-white'
             >
-              Book Now
+              {loading ? "Loading..." : "Book Now"}
             </Button>
           </div>
         </div>

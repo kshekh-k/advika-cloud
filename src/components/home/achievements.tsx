@@ -83,12 +83,13 @@ const internetPartners = [
   '/images/sify.png',
   '/images/ishan.png',
   '/images/spider-link.png',
+  '/images/yotta-logo-blue.png',
 ];
 const hardwarePartners = [
   '/images/amd.png',
   '/images/intel.png',
   '/images/asus.png',
-  '/images/Synology.png',
+  '/images/synology.png',
   '/images/hp.png',
   '/images/lenovo.png',
 ];
@@ -103,7 +104,7 @@ export default function HomeAchievements() {
           <div className='flex flex-col gap-5 lg:gap-10'>
             <h3 className='relative text-center text-xl font-bold text-primary after:absolute after:inset-x-0 after:top-1/2 after:h-px after:-translate-y-1/2 after:bg-black/10'>
               <span className='relative z-10 bg-[#F2F2F2] px-5 uppercase'>
-                Certificates
+              Our Data Center Certificates
               </span>
             </h3>
 
@@ -186,14 +187,14 @@ export default function HomeAchievements() {
                   {techPartners.map((item, index) => (
                     <div
                       key={index}
-                      className='flex h-20 w-40 shrink-0 items-center justify-center bg-white p-5 shadow'
+                      className='flex h-20 w-40 shrink-0 items-center justify-center bg-white p-3 shadow'
                     >
                       <Image
                         src={`${item}`}
                         alt={`${item}`}
                         width={100}
                         height={40}
-                        className='h-auto w-full max-w-24 object-cover'
+                        className='h-auto w-auto max-w-24 max-h-16 object-cover'
                       />
                     </div>
                   ))}
@@ -219,7 +220,7 @@ export default function HomeAchievements() {
                         alt={`${item}`}
                         width={100}
                         height={40}
-                        className='h-auto w-full max-w-24 object-cover'
+                        className='h-auto w-auto max-h-16 max-w-24 object-cover'
                       />
                     </div>
                   ))}
@@ -238,14 +239,14 @@ export default function HomeAchievements() {
                 {hardwarePartners.map((item, index) => (
                   <div
                     key={index}
-                    className='flex h-20 w-40 shrink-0 items-center justify-center bg-white p-5 shadow lg:h-28 lg:w-52'
+                    className='flex h-20 w-40 shrink-0 items-center justify-center bg-white p-3 shadow lg:w-52'
                   >
                     <Image
                       src={`${item}`}
                       alt={`${item}`}
                       width={100}
                       height={40}
-                      className='h-auto max-h-16 w-full max-w-24 object-cover'
+                      className='h-auto max-h-16 w-auto max-w-24 object-cover'
                     />
                   </div>
                 ))}

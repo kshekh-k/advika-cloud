@@ -11,7 +11,7 @@ import Image from 'next/image';
 const stats = [
   {
     icon: <Companyicon className='size-10 xl:size-14' />,
-    value: '15000+',
+    value: '3500+',
     tagline: 'Trusted EB Customers',
     border: 'lg:border-b',
   },
@@ -19,31 +19,31 @@ const stats = [
     icon: <Globeicon className='size-10 xl:size-14' />,
     value: '1000+',
     tagline: 'Global reach',
-    border: 'lg:border-b lg:border-l',
+    border: 'lg:border-b lg:!border-l',
   },
   {
     icon: <Clockicon className='size-10 xl:size-14' />,
     value: '24x7',
     tagline: 'Customer Support',
-    border: 'lg:border-b lg:border-l',
+    border: 'lg:border-b lg:!border-l',
   },
   {
     icon: <Staricon className='size-10 xl:size-14' />,
-    value: '4.5',
+    value: '4.7',
     tagline: 'Ratings at Google',
-    border: 'lg:border-l-0',
+    border: '',
   },
   {
     icon: <Cloudupicon className='size-10 xl:size-14' />,
     value: '99.9%',
     tagline: 'Uptime & Availablity',
-    border: 'lg:border-l',
+    border: 'lg:!border-l',
   },
   {
     icon: <Badgeicon className='size-10 xl:size-14' />,
     value: '30+',
     tagline: 'Awards & Recognitions',
-    border: 'lg:border-l',
+    border: 'lg:!border-l',
   },
 ];
 type Props = {
@@ -81,7 +81,7 @@ export default function HomeWhyAdvika({ onContactClick }: Props) {
       <hr className='border-white/10' />
       <div className='container'>
         <div className='max-w-full overflow-auto lg:overflow-visible'>
-          <div className='flex min-w-[750px] divide-x divide-white/10 lg:grid lg:grid-cols-3 lg:border-x lg:border-white/10'>
+          <div className='flex min-w-[750px] divide-x divide-white/10 lg:divide-x-0 lg:grid lg:grid-cols-3 lg:border-x lg:border-white/10'>
             {stats.map((item, index) => (
               <div
                 key={index}

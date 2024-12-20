@@ -1,5 +1,4 @@
 import { Button } from '@/components/ui/button';
-import { Tringleicon } from '@/icons';
 import Image from 'next/image';
 
 type Props = {
@@ -51,14 +50,7 @@ export default function HomeIntro({ onContactClick }: Props) {
               >
                 Book A Call
               </Button>
-              <button className='flex items-center gap-2'>
-                <span className='inline-flex size-14 items-center justify-center rounded-full bg-secondary shadow-1'>
-                  <Tringleicon className='size-4 text-white' />
-                </span>
-                <span className='hidden text-sm font-medium text-secondary md:inline'>
-                  How Advika cloud works?
-                </span>
-              </button>
+
             </div>
           </div>
         </div>

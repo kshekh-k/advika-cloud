@@ -1,31 +1,32 @@
 import Accordion from '../ui/accordion';
 import React from 'react';
+// import { FAQS } from '@/data/faqs';
 const accordionItems = [
   {
-    title: 'What is Web hosting? ',
+    title: 'Is advika enterprise good for small businesses?',
     content:
-      'Web hosting is the technology that puts your website online. It is one of the three essential components of establishing your Web presence: a domain name (Web address), a website and a Web host. Your domain name tells people where to find you, your website is viewed by your visitors, and web hosting makes your site part of the Internet. Quite simply, the definition of cloud Web hosting is an online storage service for any content displayed or accessed through your website.',
+      'Advika offers budget-friendly hosting and data center services that cater to small businesses without compromising quality. Services, including VPS hosting, server hosting, and cloud hosting, are easily scalable, allowing businesses to grow seamlessly.  With responsive customer service, Advika ensures that small businesses get the assistance they need promptly.',
   },
   {
-    title: 'Is Cloudminister good for small businesses?',
+    title: 'Why is advika enterprise a reliable cloud web hosting company?',
     content:
-      'Web hosting is the technology that puts your website online. It is one of the three essential components of establishing your Web presence: a domain name (Web address), a website and a Web host. Your domain name tells people where to find you, your website is viewed by your visitors, and web hosting makes your site part of the Internet. Quite simply, the definition of cloud Web hosting is an online storage service for any content displayed or accessed through your website.',
+      'Advika Enterprise leverages state-of-the-art data centers with cutting-edge technology, ensuring optimal performance and minimal downtime for your websites and applications. Their cloud hosting solutions are designed to grow with your business, allowing you to scale resources up or down as needed without service disruption. Offering economical yet feature-rich plans, Advika ensures that businesses of all sizes can access high-quality hosting services without breaking the bank.',
   },
   {
-    title: 'Why is Cloudminister a reliable cloud web hosting company?',
+    title: 'Can I change the subscription plan to match my requirements?',
     content:
-      'Web hosting is the technology that puts your website online. It is one of the three essential components of establishing your Web presence: a domain name (Web address), a website and a Web host. Your domain name tells people where to find you, your website is viewed by your visitors, and web hosting makes your site part of the Internet. Quite simply, the definition of cloud Web hosting is an online storage service for any content displayed or accessed through your website.',
+      'Yes, you can change the subscription plan to match your requirements anytime.',
   },
   {
-    title: 'How do I buy a domain name on Cloudminister?',
+    title: 'Are there any contracts or termination policies associated with the services?',
     content:
-      'Web hosting is the technology that puts your website online. It is one of the three essential components of establishing your Web presence: a domain name (Web address), a website and a Web host. Your domain name tells people where to find you, your website is viewed by your visitors, and web hosting makes your site part of the Internet. Quite simply, the definition of cloud Web hosting is an online storage service for any content displayed or accessed through your website.',
+      'At Advika Enterprise, we offer flexibility in our service agreements. While we provide the option for pay-as-you-go plans, longer-term commitments often come with additional benefits. Our customer-friendly approach means you can choose the plan that suits your business needs. We are transparent about termination policies with a 30-day prior notice period for users who want to discontinue our services. Feel free to discuss your specific requirements with our team.',
   },
   {
     title:
-      'What features are offered in Cloudminister’s cheap cloud web hosting plan?',
+      'How can I manage my backups while using USA server plan?',
     content:
-      'Web hosting is the technology that puts your website online. It is one of the three essential components of establishing your Web presence: a domain name (Web address), a website and a Web host. Your domain name tells people where to find you, your website is viewed by your visitors, and web hosting makes your site part of the Internet. Quite simply, the definition of cloud Web hosting is an online storage service for any content displayed or accessed through your website.',
+      'Yes you can purchase backup services as per your needs and use them to maintain backups regularly.',
   },
 ];
 
