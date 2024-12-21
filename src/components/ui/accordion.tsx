@@ -16,7 +16,7 @@ const Accordion: React.FC<AccordionProps> = ({ items }) => {
     setOpenIndex(openIndex === index ? null : index);
   };
   return (
-    <div className=' '>
+    <>
       {items.map((item, index) => (
         <div
           key={index}
@@ -46,7 +46,7 @@ const Accordion: React.FC<AccordionProps> = ({ items }) => {
           )}
         </div>
       ))}
-    </div>
+    </>
   );
 };
 

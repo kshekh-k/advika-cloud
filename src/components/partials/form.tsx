@@ -4,62 +4,39 @@ import { Button } from '../ui/button'
 import ReCAPTCHA from "react-google-recaptcha";
 import { FormSubmit } from "@/app/api/forms/route";
 import { toast } from "react-toastify";
-
+import { Countries } from '@/data/countries';
 function Formcontact() {
   const [loading, setLoading] = React.useState(false);
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [contact, setContact] = React.useState("");
   const [website, setWebsite] = React.useState("");
-  const [country, setCountry] = React.useSate("")
+  const [country, setCountry] = React.useState<string>("IN")
   const [message, setMessage] = React.useState("");
-
   const [captchaToken, setCaptchaToken] = React.useState<string | null>(null);
-
-  const [countries, setCountries] = useState([]);
- 
-
-  React.useEffect(() => {
-    // Fetch country data from API route
-    const fetchCountries = async () => {
-      try {
-        const response = await fetch('/api/countries');
-        const data = await response.json();
-        setCountries(data);
-      } catch (error) {
-        console.error('Error fetching country data:', error);
-      }
-    };
-
-    fetchCountries();
-  }, []);
-
-
-
-
   const handleCaptchaChange = (token: string | null) => {
     setCaptchaToken(token);
   };
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // if (!captchaToken) {
-    //   alert("Please complete the CAPTCHA");
-    //   return;
-    // }
+    if (!captchaToken) {
+      alert("Please complete the CAPTCHA");
+      return;
+    }
 
-    // const captcha = await fetch("/api/captcha", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify({ token: captchaToken }),
-    // });
+    const captcha = await fetch("/api/captcha", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ token: captchaToken }),
+    });
 
-    // const result = await captcha.json();
+    const result = await captcha.json();
 
-    // if (result.success) {
-    //   alert("Form submitted successfully!");
-    // } else {
-    //   alert("CAPTCHA verification failed!");
-    // }
+    if (result.success) {
+      alert("Form submitted successfully!");
+    } else {
+      alert("CAPTCHA verification failed!");
+    }
 
     setLoading(true);
     const data: FormSubmit = {
@@ -69,8 +46,6 @@ function Formcontact() {
       website,
       country,
       message,
-     
-
     };
 
     const res = await fetch("/api/forms", {
@@ -94,8 +69,13 @@ function Formcontact() {
     setEmail("");
     setContact("");
     setWebsite("");
-    setCountry("");
+    setCountry('');
     setMessage("");
+  };
+
+
+  const selectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setCountry(e.target.value); // Error here
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -120,14 +100,14 @@ function Formcontact() {
             value={name} required
           />
           <div className='flex flex-col gap-5 sm:grid sm:grid-cols-2'>
-          <input
-            type='email'
-            className='rounded-md bg-white/10 p-5 outline-none duration-200 ease-in-out text-white placeholder:text-white focus:bg-white/20'
-            placeholder='Email Address'
-            onChange={(e) => setEmail(e.target.value)}
-            value={email} required
-          />
-          <input
+            <input
+              type='email'
+              className='rounded-md bg-white/10 p-5 outline-none duration-200 ease-in-out text-white placeholder:text-white focus:bg-white/20'
+              placeholder='Email Address'
+              onChange={(e) => setEmail(e.target.value)}
+              value={email} required
+            />
+            <input
               type='tel'
               className='w-full rounded-md bg-white/10 p-5 outline-none duration-200 ease-in-out text-white placeholder:text-white focus:bg-white/20'
               placeholder='Phone Number' required
@@ -139,24 +119,23 @@ function Formcontact() {
             <input
               type='tel'
               className='w-full rounded-md bg-white/10 p-5 outline-none duration-200 ease-in-out text-white placeholder:text-white focus:bg-white/20'
-              placeholder='Phone Number' required
-              onChange={(e)=> SetWebsite(e.target.value)}
+              placeholder='Website' required
+              onChange={(e) => setWebsite(e.target.value)}
               value={website}
             />
             <select
-            
               className='w-full rounded-md bg-white/10 p-5 outline-none duration-200 ease-in-out text-white placeholder:text-white focus:bg-white/20'
-             onChange={(e) => setCountry(e.target.value)}
+              onChange={selectChange}
               value={country}
             >
-               <option value="" disabled>
-          Select a country
-          </option>
-               {countries.map((country) => (
-            <option key={country.code} value={country.code}>
-              {country.name}
-            </option>
-          ))}
+              <option value="" disabled>
+                Select a country
+              </option>
+              {Countries.map((country, index) => (
+                <option key={index + country.code} value={country.code} className='text-black/70'>
+                  {country.name}
+                </option>
+              ))}
             </select>
           </div>
           <textarea
@@ -168,10 +147,10 @@ function Formcontact() {
           ></textarea>
           <div className='flex justify-between gap-5 flex-wrap items-stretch'>
 
-            {/* <ReCAPTCHA
+            <ReCAPTCHA
               sitekey={`${process.env.NEXt_PUBLIC_CAPTCHA_SITE_KEY}` || ""}
               onChange={handleCaptchaChange}
-            /> */}
+            />
             <Button type="submit"
               variant={'white'}
               size={'lg'}
