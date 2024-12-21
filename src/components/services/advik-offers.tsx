@@ -22,7 +22,8 @@ const advikaOffer = [
                 subtitle: 'LIMITATIONS',
                 list: ['Not ideal for sensitive data or regulated industries.', 'Unsuitable for highperformance computing or dedicated resources']
             },
-        ]
+        ],
+        dataAlt:'https://www.freepik.com/free-vector/scheme-data-transmission-isometric-secure-connection-cloud-computing-server-room-datacent_4102311.htm'
     },
     {
         thumb: '/svg/server-private-cloud.svg',
@@ -45,7 +46,8 @@ const advikaOffer = [
                 subtitle: 'LIMITATIONS',
                 list: ['High Initial Cost', 'Maintenance', 'Limited Scalability', 'Resource Utilization', 'Complexity']
             },
-        ]
+        ],
+        dataAlt:'https://www.freepik.com/free-vector/server-room-cabinet-data-center-database-isometric-icon-server-rack-farm_4103156.htm'
 
     },
     {
@@ -73,7 +75,8 @@ const advikaOffer = [
                 subtitle: 'LIMITATIONS',
                 list: ['High Cost', 'Power Consumption', 'Complex Setup', 'Limited Suitability', 'Scalability Challenges']
             },
-        ]
+        ],
+        dataAlt:'https://www.freepik.com/free-vector/cloud-technology-storage-transfer-data-isometric-mobile-phone-data-downloading_4102313.htm'
     },
     {
         thumb: '/svg/server-dedicated.svg',
@@ -100,7 +103,8 @@ const advikaOffer = [
                 subtitle: 'LIMITATIONS',
                 list: ['High Cost', 'Technical Expertise', 'Maintenance', 'Scalability Challenges', 'Overprovisioning Risks']
             },
-        ]
+        ],
+        dataAlt:'https://www.freepik.com/free-vector/server-room-datacenter-isometric-icon-white-background-cloud-technology-computing-data-databa_4102312.htm'
     },
     {
         thumb: '/svg/server-customize.svg',
@@ -127,7 +131,8 @@ const advikaOffer = [
                 subtitle: 'LIMITATIONS',
                 list: ['High Cost', 'Complex Setup', 'Maintenance', 'Time-Consuming', 'Overprovisioning Risks']
             },
-        ]
+        ],
+        dataAlt:'https://www.freepik.com/free-vector/big-data-source-data-center-cloud-computing-cloud-storage-isometric-concept-server-room-rack_4102872.htm'
     },
 ]
 function Advikoffers() {
@@ -140,7 +145,7 @@ function Advikoffers() {
                     {advikaOffer.map((item, index) =>
                         <div key={index} className='p-5 lg:p-10 shrink-0 md:w-auto bg-black/5 flex flex-col lg:grid lg:grid-cols-12 gap-10'>
                             <div className='overflow-hidden flex justify-center items-center max-w-sm mx-auto lg:max-w-none  col-span-4'>
-                                <Image src={`${item.thumb}`} alt={`${item.thumb}`} width={350} height={350} className='aspect-square w-full h-auto' />
+                                <Image src={`${item.thumb}`} alt={`${item.thumb}`} width={350} height={350} className='aspect-square w-full h-auto' data-alt={`<a href='${item.dataAlt}'>www.freepik.com</a>`} />
                             </div>
                             <div className='space-y-2 col-span-8'>
                                 <h3 className='text-3xl text-primary text-left font-bold'>{item.title}</h3>

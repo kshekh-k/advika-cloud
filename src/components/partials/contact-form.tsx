@@ -22,6 +22,7 @@ export default function ContactForm() {
               className='size-full object-cover'
               width={600}
               height={500}
+              data-alt="<a href='https://www.freepik.com/free-photo/business-lady-work_5633823.htm'>www.freepik.com</a>"
             />
           </div>
           <Formcontact />

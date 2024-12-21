@@ -8,6 +8,7 @@ export type FormSubmit = {
   email: string;
   contact: string;
   website: string;
+  country: string;
   message: string;
 };
 
@@ -31,14 +32,21 @@ export async function POST(req: NextRequest) {
   });
 
   const sheets = google.sheets({ version: 'v4', auth });
-
+  const date = new Date();
+  const time = format(date, 'hh:mm a');
+  const inDate = format(date, 'dd/MM/yyyy');
+  const weekday = format(date, 'EEEE');
   const values = [
     [
-      format(new Date(), 'd MMMM, yyyy'),
+      // format(new Date(), 'd MMMM, yyyy'),      
+      inDate,
+      weekday,      
+      time,
       body.name,
       body.email,
       body.contact,
       body.website,
+      body.country,
       body.message,
     ],
   ];
@@ -59,7 +67,7 @@ export async function POST(req: NextRequest) {
       subject: 'New message received at advika.cloud',
       text: `Dear Admin!\nA new form has been submitted:\nName: ${
         body.name
-      }\nEmail: ${body.email}\nContact: ${body.contact}\nWebsite: ${body.website}\nMessage: ${
+      }\nEmail: ${body.email}\nContact: ${body.contact}\nWebsite: ${body.website}\nWebsite: ${body.country}\nMessage: ${
         body.message
       }`,
       to: ['rahul.raj@advika.cloud', 'kshekh@kshekh.com'],

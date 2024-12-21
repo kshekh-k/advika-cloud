@@ -11,7 +11,7 @@ import Socialmedia from '../ui/social-media'
 function ContactComponent() {
   return (
     <Layout>
-      <Innerintro headingUpline="Advika" heading="Contact us" descp="Get in touch with us now! Simply fill out the form below, and we'll respond promptly to discuss your needs." thumb='/images/contact-us.png' thumbAlt="contact-us" />
+      <Innerintro headingUpline="Advika" heading="Contact us" descp="Get in touch with us now! Simply fill out the form below, and we'll respond promptly to discuss your needs." thumb='/images/contact-us.png' thumbAlt="contact-us" dataAlt="<a href='https://www.freepik.com/free-photo/portrait-call-center-woman_4070847.htm'>www.freepik.com</a>" />
       <section className='py-10 lg:py-20 relative'>
         <div className='absolute inset-0 overflow-hidden'>
           <Image src="/images/contact-bg.svg" width={1920} height={600} alt="" className="w-full h-auto" />

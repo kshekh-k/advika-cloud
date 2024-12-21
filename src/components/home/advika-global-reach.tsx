@@ -55,6 +55,7 @@ export default function AdvikaGlobalReach() {
             src={'/images/advika-map-vector.svg'}
             alt='Advika Global Reach'
             className='mt-10 hidden w-full lg:block'
+            data-alt="<a href='https://www.freepik.com/free-vector/worldwide-connection-gray-background-illustration-vector_3439375.htm'>www.freepik.com</a>"
             width={1400}
             height={800}
           />

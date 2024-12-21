@@ -34,7 +34,7 @@ function Vision() {
           </div>
           <div className='md:col-span-6 w-full md:w-auto'>
             <div className='w-full bg-black/5 flex justify-center overflow-hidden'>
-              <Image src={`/images/about-us.png`} alt={`about-us`} width={600} height={600} className={`'aspect-squares w-full h-auto`} />
+              <Image src={`/images/about-us.png`} alt={`about-us`} width={600} height={600} className={`'aspect-squares w-full h-auto`} data-alt="<a href='https://www.freepik.com/free-photo/woman-scrolling-laptop_28096252.htm'>www.freepik.com</a>" />
             </div>
           </div>
         </div>

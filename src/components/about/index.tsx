@@ -14,7 +14,7 @@ function About() {
   return (
     <>
       <Layout>
-        <Innerintro headingUpline="About" heading="Advika Cloud" descp="At Advika Web, we are dedicated to reshaping the landscape of web hosting services through our commitment to reliability, innovation, and customer-centric solutions. Since our inception, we have set the standard for exceptional hosting experiences, providing robust and cutting-edge services that empower individuals and businesses to thrive online." thumb='/images/about-us.svg' thumbAlt="about-us" thumbClass="w-80 h-auto" />
+        <Innerintro headingUpline="About" heading="Advika Cloud" descp="At Advika Web, we are dedicated to reshaping the landscape of web hosting services through our commitment to reliability, innovation, and customer-centric solutions. Since our inception, we have set the standard for exceptional hosting experiences, providing robust and cutting-edge services that empower individuals and businesses to thrive online." thumb='/images/about-us.svg' thumbAlt="about-us" thumbClass="w-80 h-auto" dataAlt='<a href="https://www.freepik.com/free-vector/server-room-isometric-icon-database-connection-transfer-data-remote-cloud-storage-server-rack_4102278.htm">www.freepik.com</a>' />
         <Stats />
         <Innerabout heading='Advika Provides a Huge Range of Web Hosting Services' thumb='/images/sharad-k-rathi-ceo.png' thumbAlt={'sharad-k-rathi-ceo.png'}>
           <p className='font-medium leading-loose text-black/60'>

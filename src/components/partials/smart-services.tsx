@@ -44,7 +44,7 @@ function Smartservices({className}:{className?:string}) {
             </div>
           </div>
           <div className='md:col-span-4 lg:col-span-6 relative overflow-hidden flex justify-center items-center'>
-            <Image src={'/images/smart-services.png'} alt='Smart Services' width={800} height={600} className='w-full h-auto' />
+            <Image src={'/images/smart-services.png'} alt='Smart Services' width={800} height={600} className='w-full h-auto' data-alt="<a href='https://www.freepik.com/free-photo/smiley-dealers-car-sellers-office_5876715.htm'>www.freepik.com</a>" />
           </div>
         </div>
       </div>

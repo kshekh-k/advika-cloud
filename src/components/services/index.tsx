@@ -14,10 +14,9 @@ import { CheckIcon } from 'lucide-react'
 function Services() {
   return (
     <Layout>
-      <Innerintro headingUpline="Advika's" heading="Cloud Server Solution" descp="cloud solutions drive limitless industry growth by breaking geographical barriers and unlocking endless expansion potential." thumb='/images/cloud-server.svg' thumbAlt="cloud-server.svg" thumbClass="w-80 h-auto" />
-
+      <Innerintro headingUpline="Advika's" heading="Cloud Server Solution" descp="cloud solutions drive limitless industry growth by breaking geographical barriers and unlocking endless expansion potential." thumb='/images/cloud-server.svg' thumbAlt="cloud-server.svg" thumbClass="w-80 h-auto" dataAlt='<a href="https://www.freepik.com/free-vector/scheme-data-transmission-isometric-secure-connection-cloud-computing-server-room-datacent_4102311.htm">www.freepik.com</a>' />
       <Stats />
-       <Innerabout heading='Advika Provides the best Cloud Server Technologies' thumb='/images/about-services-2.png' thumbAlt={'about-services-2.png'}>
+       <Innerabout heading='Advika Provides the best Cloud Server Technologies' thumb='/images/about-services-2.png' thumbAlt={'about-services-2.png'} dataAlt="<a href='https://www.freepik.com/free-photo/portrait-happy-woman-with-digital-tablet_12652731.htm'>www.freepik.com</a>">
        <p className='font-medium leading-loose text-black/60'>
             We are the pioneers in Cloud Server services in India, offering highly affordable and reliable server solutions to our customers. Here are some key highlights of  our presence and achievements
             </p>
