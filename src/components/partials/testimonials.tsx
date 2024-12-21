@@ -5,19 +5,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Quoteicon } from '@/icons';
-const testimonies = [
-  {
-    quote: 'Advika offers reliable and affordable hosting solutions. They provide excellent uptime, fast loading speeds, and responsive customer support. They are known for their professionalism, expertise, and timely solutions. Overall, Advika is a recommended choice for individuals and small businesses looking for a web hosting service.',
-    name: 'Kamal Gupta',
-    location: 'Jaipur'
-  },
-  {
-    quote: 'Advika Web Hosting is a reliable and affordable hosting solution provider The customer support team is very strong and gives us quick solutions. I am  using VPS server for more than 7 years.',
-    name: 'Abhishek Singh',
-    location: 'Gurugram'
-  },
- 
-]
+import { TESTIMONIALS } from '@/data/testimonials';
+
 export default function Testimonials() {
   return (
     <div className='container'>
@@ -44,24 +33,24 @@ export default function Testimonials() {
           }}
           className='mySwiper'
         >
-          {testimonies.map((item,index)=>
-          <SwiperSlide key={index}>
-            <div className='space-y-3 rounded-lg bg-primary/5 p-5 lg:p-10'>
-              <div className='relative rounded border border-primary/50 bg-white p-5 lg:p-10'>
-                <Quoteicon className='absolute left-5 top-5 size-16 text-primary/5' />
-                <p className='relative z-10 italic leading-loose text-black/60 lg:text-xl lg:leading-loose'>
-                {item.quote}
-                </p>
+          {TESTIMONIALS.map((item, index) =>
+            <SwiperSlide key={index}>
+              <div className='space-y-3 rounded-lg bg-primary/5 p-5 lg:p-10'>
+                <div className='relative rounded border border-primary/50 bg-white p-5 lg:p-10'>
+                  <Quoteicon className='absolute left-5 top-5 size-16 text-primary/5' />
+                  <p className='relative z-10 italic leading-loose text-black/60 lg:text-xl lg:leading-loose'>
+                    {item.quote}
+                  </p>
+                </div>
+                <div className='space-y-1 pt-3'>
+                  <h4 className='text-xl font-semibold text-black/70'>
+                    {item.name}
+                  </h4>
+                  <p className='text-lg text-black/50'>{item.location}</p>
+                </div>
               </div>
-              <div className='space-y-1 pt-3'>
-                <h4 className='text-xl font-semibold text-black/70'>
-                {item.name}
-                </h4>
-                <p className='text-lg text-black/50'>{item.location}</p>
-              </div>
-            </div>
-          </SwiperSlide>
-        )}
+            </SwiperSlide>
+          )}
         </Swiper>
       </div>
     </div>

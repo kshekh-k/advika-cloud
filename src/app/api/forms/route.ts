@@ -38,9 +38,9 @@ export async function POST(req: NextRequest) {
   const weekday = format(date, 'EEEE');
   const values = [
     [
-      // format(new Date(), 'd MMMM, yyyy'),      
+      // format(new Date(), 'd MMMM, yyyy'),
       inDate,
-      weekday,      
+      weekday,
       time,
       body.name,
       body.email,
@@ -67,10 +67,10 @@ export async function POST(req: NextRequest) {
       subject: 'New message received at advika.cloud',
       text: `Dear Admin!\nA new form has been submitted:\nName: ${
         body.name
-      }\nEmail: ${body.email}\nContact: ${body.contact}\nWebsite: ${body.website}\nWebsite: ${body.country}\nMessage: ${
+      }\nEmail: ${body.email}\nContact: ${body.contact}\nWebsite: ${body.website}\nCountry: ${body.country}\nMessage: ${
         body.message
       }`,
-      to: ['rahul.raj@advika.cloud', 'kshekh@kshekh.com'],
+      to: ['rahul.raj@advika.cloud'],
     });
 
     return Response.json({
