@@ -1,51 +1,7 @@
 import { Button } from '@/components/ui/button';
-import {
-  Badgeicon,
-  Clockicon,
-  Cloudupicon,
-  Companyicon,
-  Globeicon,
-  Staricon,
-} from '@/icons';
+import { stats } from '@/data/stats';
 import Image from 'next/image';
-const stats = [
-  {
-    icon: <Companyicon className='size-10 xl:size-14' />,
-    value: '3500+',
-    tagline: 'Trusted EB Customers',
-    border: 'lg:border-b',
-  },
-  {
-    icon: <Globeicon className='size-10 xl:size-14' />,
-    value: '1000+',
-    tagline: 'Global reach',
-    border: 'lg:border-b lg:!border-l',
-  },
-  {
-    icon: <Clockicon className='size-10 xl:size-14' />,
-    value: '24x7',
-    tagline: 'Customer Support',
-    border: 'lg:border-b lg:!border-l',
-  },
-  {
-    icon: <Staricon className='size-10 xl:size-14' />,
-    value: '4.7',
-    tagline: 'Ratings at Google',
-    border: '',
-  },
-  {
-    icon: <Cloudupicon className='size-10 xl:size-14' />,
-    value: '99.9%',
-    tagline: 'Uptime & Availablity',
-    border: 'lg:!border-l',
-  },
-  {
-    icon: <Badgeicon className='size-10 xl:size-14' />,
-    value: '30+',
-    tagline: 'Awards & Recognitions',
-    border: 'lg:!border-l',
-  },
-];
+
 type Props = {
   onContactClick: () => void;
 };
@@ -82,21 +38,20 @@ export default function HomeWhyAdvika({ onContactClick }: Props) {
       <div className='container'>
         <div className='max-w-full overflow-auto lg:overflow-visible'>
           <div className='flex min-w-[750px] divide-x divide-white/10 lg:divide-x-0 lg:grid lg:grid-cols-3 lg:border-x lg:border-white/10'>
-            {stats.map((item, index) => (
-              <div
-                key={index}
-                className={`flex w-[300px] shrink-0 items-center justify-center gap-5 border-white/10 py-10 lg:w-auto lg:py-14 xl:gap-10 xl:py-20 ${item.border}`}
+            {stats.map(({ id, icon: Icon, value, tagline }) => (
+              <div id={`item-${id}`} key={`item-${id}`}
+                className={`flex w-[300px] shrink-0 items-center justify-center gap-5 border-white/10 py-10 lg:w-auto lg:py-14 xl:gap-10 xl:py-20 ${id == 1 ? 'lg:border-b' : id == 2 ? 'lg:border-b lg:!border-l' : id == 3 ? 'lg:border-b lg:!border-l' : id == 4 ? '' : id == 5 ? 'lg:!border-l' : 'lg:!border-l'}`}
               >
                 <div className='flex size-16 shrink-0 items-center justify-center rounded-full bg-secondary text-white xl:size-24'>
-                  {item.icon}
+                  <Icon className='size-10 xl:size-14' />
                 </div>
                 <div className='space-y-1'>
                   <h2 className='text-3xl font-semibold leading-none xl:text-5xl xl:leading-none'>
-                    {item.value}
+                    {value}
                   </h2>
                   <p className='text-sm uppercase leading-none tracking-wider'>
                     {' '}
-                    {item.tagline}
+                    {tagline}
                   </p>
                 </div>
               </div>
