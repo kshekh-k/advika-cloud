@@ -3,37 +3,47 @@ import React from 'react';
 import {
   TbBrandFacebook,
   TbBrandX,
-  TbBrandBluesky,
-  TbBrandYoutube,
   TbBrandWhatsapp,
+  TbBrandLinkedin,
+  TbBrandInstagram,
 } from 'react-icons/tb';
 const socialicons = [
   {
     icon: <TbBrandFacebook className="size-5" />,
     name: 'facebook',
-    url: '#',
+    url: 'https://www.facebook.com/profile.php?id=100068878247058',
+  },
+  {
+    icon: <TbBrandInstagram className="size-5" />,
+    name: 'Instagram',
+    url: 'https://www.instagram.com/advikaindia/',
+  },
+  {
+    icon: <TbBrandLinkedin className="size-5" />,
+    name: 'Linkedin',
+    url: 'https://www.linkedin.com/in/sharad-k-rathi-1536a912/',
   },
   {
     icon: <TbBrandX className="size-5" />,
-    name: 'x',
-    url: '#',
+    name: 'X.cpm',
+    url: 'https://twitter.com/advikaindia',
   },
-  {
-    icon: <TbBrandBluesky className="size-5" />,
-    name: 'bluesky',
-    url: '#',
-  },
-  {
-    icon: <TbBrandYoutube className="size-5" />,
-    name: 'youtube',
-    url: '#',
-  },
+  // {
+  //   icon: <TbBrandBluesky className="size-5" />,
+  //   name: 'bluesky',
+  //   url: '#',
+  // },
   {
     icon: <TbBrandWhatsapp className="size-5" />,
     name: 'whatsapp',
-    url: '#',
+    url: 'tel:+919829714343',
   },
 ]
+
+
+
+
+
 type Social = {
   className?: string
 }
