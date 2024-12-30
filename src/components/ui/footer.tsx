@@ -14,20 +14,24 @@ const AboutCompany = [
   {
     label: 'Services',
     link: '/our-services',
-  }, 
+  },
 ];
 const HelpSupport = [
   {
     label: 'FAQs',
     link: '/#faq',
-  }, 
+  },
   {
     label: 'Contact us',
     link: '/contact',
-  }, 
+  },
   {
     label: 'Terms of Services',
-    link: '/',
+    link: '/terms-conditions',
+  },
+  {
+    label: 'Backup Policy',
+    link: '/backup-policy',
   },
 ];
 
