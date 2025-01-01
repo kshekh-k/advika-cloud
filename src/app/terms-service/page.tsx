@@ -1,24 +1,31 @@
 import Layout from '@/components/layout';
+import Innerintro from '@/components/partials/inner-intro';
+import Link from 'next/link';
 import React from 'react';
 
-function Termsconditions() {
+function Termsservice() {
   return (
     <Layout>
-      <div className='mx-auto max-w-5xl py-10'>
-        <h1 className='pb-5 text-center text-3xl font-bold text-black/80 lg:text-5xl'>
-          Terms and Conditions
-        </h1>
-        <p className='mt-3 text-left font-medium leading-relaxed text-black/50 xl:text-lg xl:leading-relaxed'>
+      <Innerintro
+        headingUpline='Terms of Services'
+        heading='Advika Cloud'
+        descp="Welcome to Advika Cloud's Terms of services. Here you will know about terms of use of Advika cloud services"
+        thumb='/images/advica-terms.jpg'
+        thumbAlt='terms-service'
+        dataAlt="<a href='https://www.freepik.com/free-photo/option-writing-checkbox-concepts-survey_1103363.htm#fromView=search&page=1&position=2&uuid=36b1918d-8489-4eb8-8e9a-1d5d040b10cb&new_detail=true'>www.freepik.com</a>"
+      />
+
+      <div className='mx-auto max-w-5xl px-5 py-10'>
+
+        <p className='mt-3 text-left font-semibold leading-relaxed text-black/60 xl:text-lg xl:leading-relaxed'>
           Effective Date: December 30, 2024
         </p>
         <p className='mt-3 text-left font-medium leading-relaxed text-black/50 xl:text-lg xl:leading-relaxed'>
-          Welcome to Advika Cloud (“we,” “our,” or “us”). These Terms and
-          Conditions (“Terms”) govern your use of our website and services
-          available at www.advika.cloud (“Website”). By accessing or using our
+          Welcome to Advika Cloud (“we,” “our,” or “us”). These Terms and Conditions (“Terms”) govern your use of our website and services available at www.advika.cloud (“Website”). By accessing or using our
           Website and services, you agree to comply with and be bound by these
           Terms. If you do not agree, please do not use our Website or services.
         </p>
-        <h2 className='pb-3 pt-5 text-center text-2xl font-bold text-black/80 lg:text-4xl'>
+        <h2 className='pb-3 pt-5 text-left text-2xl font-bold text-black/80 lg:text-4xl'>
           Terms
         </h2>
         <h3 className='py-3 pt-7 text-left text-xl font-bold text-black/80 lg:text-3xl'>
@@ -152,11 +159,27 @@ function Termsconditions() {
         <h3 className='py-3 pt-7 text-left text-xl font-bold text-black/80 lg:text-3xl'>
           11. Governing Law and Jurisdiction
         </h3>
-        <p className='mt-3 text-left font-medium leading-relaxed text-black/50 xl:text-lg xl:leading-relaxed'>
+        <p className='mt-3 text-left font-semibold leading-relaxed text-black/50 xl:text-lg xl:leading-relaxed'>
           These Terms shall be governed by and construed in accordance with the
           laws of India. Any disputes shall be subject to the exclusive
           jurisdiction of the courts of Jaipur, Rajasthan.
         </p>
+
+
+        <p className='mt-3 text-left font-semibold leading-relaxed text-black/60 xl:text-lg xl:leading-relaxed'>
+          In any event of dispute the area of Jurisdiction would be Jaipur only.
+        </p>
+        <p className='mt-3 text-left font-semibold leading-relaxed text-black/60 xl:text-lg xl:leading-relaxed'>
+          In any event of dispute the area of Jurisdiction In the event of a
+          government inquiry requiring data or logs, the customer is responsible
+          for providing the required information.
+        </p>
+        <p className='mt-3 text-left font-semibold leading-relaxed text-black/60 xl:text-lg xl:leading-relaxed'>
+          Customers must provide at least 30 days&apos; advance notice via email
+          for service cancellation.
+        </p>
+
+
         <h3 className='py-3 pt-7 text-left text-xl font-bold text-black/80 lg:text-3xl'>
           12. Contact Information
         </h3>
@@ -167,14 +190,15 @@ function Termsconditions() {
           Advika Data Center Services Pvt. Ltd.
         </h3>
         <p className='mt-3 text-left font-medium leading-relaxed text-black/50 xl:text-lg xl:leading-relaxed'>
-          <strong>Website:</strong> www.advika.cloud
+          <strong>Website:</strong> <Link href="https://www.advika.cloud" className='hover:text-primary ease-in-out duration-200'>www.advika.cloud</Link>
         </p>
         <p className='mt-3 text-left font-medium leading-relaxed text-black/50 xl:text-lg xl:leading-relaxed'>
-          <strong>Email:</strong> support@advika.cloud{' '}
+          <strong>Email:</strong> <Link href="mailto:support@advika.cloud" className='hover:text-primary ease-in-out duration-200'>support@advika.cloud</Link>
         </p>
+
       </div>
     </Layout>
   );
 }
 
-export default Termsconditions;
+export default Termsservice;
