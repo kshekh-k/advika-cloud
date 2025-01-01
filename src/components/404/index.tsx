@@ -28,6 +28,13 @@ function Page404() {
         <div className='flex max-w-xl flex-col items-center justify-center'>
           {/* <LottieReact src="/images/advika-404.json" autoplay /> */}
           {/* <LottieReact animationData={Advika404} /> */}
+          <Image
+            // className='h-auto w-full'
+            alt='cloud-top'
+            width={600}
+            height={600}
+            src='/images/advika-404.svg'
+          />
           <div className=''>
             <p className='mt-10 border-y border-white/10 py-5 text-3xl font-bold uppercase tracking-wider text-white sm:text-4xl md:text-5xl lg:text-6xl'>
               Page <span className='text-secondary'>Not</span> Found

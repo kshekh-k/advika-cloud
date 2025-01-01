@@ -13,7 +13,7 @@ export async function POST(req: NextRequest) {
       throw new Error('Token is missing');
     }
 
-    const secretKey = process.env.NEXt_PUBLIC_CAPTCHA_SECRET_KEY; // Replace with your actual secret key
+    const secretKey = process.env.NEXT_PUBLIC_CAPTCHA_SECRET_KEY; // Replace with your actual secret key
     const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${token}`;
 
     const response = await fetch(verificationUrl, { method: 'POST' });

@@ -88,6 +88,8 @@ function Formcontact() {
     }
   };
 
+  console.log('CAPTCHA SITE KEY===>', process.env.NEXT_PUBLIC_CAPTCHA_SITE_KEY);
+
   return (
     <div className='relative'>
       <form onSubmit={handleSubmit}>
@@ -120,7 +122,7 @@ function Formcontact() {
           </div>
           <div className='flex flex-col gap-5 sm:grid sm:grid-cols-2'>
             <input
-              type='tel'
+              type='text'
               className='w-full rounded-md bg-white/10 p-5 text-white outline-none duration-200 ease-in-out placeholder:text-white focus:bg-white/20'
               placeholder='Website'
               required
@@ -156,7 +158,7 @@ function Formcontact() {
           ></textarea>
           <div className='flex flex-wrap items-stretch justify-between gap-5'>
             <ReCAPTCHA
-              sitekey={`${process.env.NEXt_PUBLIC_CAPTCHA_SITE_KEY}` || ''}
+              sitekey={`${process.env.NEXT_PUBLIC_CAPTCHA_SITE_KEY}` || ''}
               onChange={handleCaptchaChange}
             />
             <Button
