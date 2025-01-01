@@ -13,6 +13,8 @@
 # testing
 /coverage
 
+site-info.txt
+requests.http
 # next.js
 /.next/
 /out/

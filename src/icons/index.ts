@@ -1,0 +1,20 @@
+// export { default as facebook } from './svgs/facebook'
+export { default as Tringleicon } from './svgs/tryngle';
+export { default as Cloudgearicon } from './svgs/cloud-gear';
+export { default as Mailenvelopicon } from './svgs/mail-envelop';
+export { default as Targeticon } from './svgs/target';
+export { default as Availabilityicon } from './svgs/availability';
+export { default as Adaptabilityicon } from './svgs/adaptability';
+export { default as Acceptabilityicon } from './svgs/acceptability';
+export { default as Affordabilityicon } from './svgs/affordability';
+export { default as Companyicon } from './svgs/company';
+export { default as Globeicon } from './svgs/globe';
+export { default as Clockicon } from './svgs/clock';
+export { default as Cloudupicon } from './svgs/cloud-up';
+export { default as Badgeicon } from './svgs/badge';
+export { default as Staricon } from './svgs/star';
+export { default as Quoteicon } from './svgs/quote';
+export { default as Support24x7icon } from './svgs/supprt-24x7';
+export { default as Agreementicon } from './svgs/agreement';
+export { default as Managericon } from './svgs/manager';
+export { default as Awardbadgeicon } from './svgs/award-badge';

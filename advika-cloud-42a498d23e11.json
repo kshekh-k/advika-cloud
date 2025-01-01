@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "advika-cloud",
+  "private_key_id": "42a498d23e11878904752bc4d6982a9d969d6796",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCUwmWAutvWSWXL\nWtmG+nTtz59BltX15PmrBSkbrAwLQY0nGfflis/568H86d7C3F7sGHY4zUB4wHwL\nMp0ZdlSvG6UKEPnnLhvo4QDdbsH8cv2nXSfxF9xXi0S7pdbIk6x99HAzOOwRn+VB\niKnY7sHk7EtTbcSRBdGiSVtuH7veauObli9gHZ1byKb51wXG4HnNAohfvLkSrpbS\nOK0071HdrZx6nQWoBeeX2JywUl1moKGUrAjZuPh4RENs6A+/ehTGnLT8QtY2y8SD\n1ugWMW1F3MwLLnZv6fJ/jkFh0pEVHOVPino6aOI1k8f2tr4FkKBpY5fO8lX/TbBt\n50pdjgfbAgMBAAECggEAGtcCOlo8jOq8R5cSNWTeEQRLbymYXB/enik1tAz0NVmz\n7pCkZhGIGcccPpYxv4XESKPXPMNntQHBv8F3j98GQ3vg6LKMbFYo6fkiz1ELBhH3\nSymnKbxM4Ky7j4HKAXGHh0hBsDQ+f6WSVyMhxga6DCRIKPreou3iV34V1YY7PtNS\nuvsMjcQhK2rlM3TD/zJstP7/DmgLk8Scvx3QYuSeSIExDBEDBzQOzVjz1s/dRncY\njVsO4KNotPtP+uc6nJHrwbA9wJBgHbfDHSsBYwUn8h4IH6yYU+yNtzoL76Ev8Sly\nbgRpv7c9it6d5GFUh3SbKiiCTE5+CeDIJ+B0YkloYQKBgQDRUL0rkHCm/P0UtOS7\nbDSfP+Jh7UFXGEa8oQCyDy09/TjIgnj7B3s0WeUIwqj7zVlFu1aaQLHVG+H3TRw6\nGgqDAml0SY4qm2Tbc9Y9mmZCm0/DrSP6gKNSP9pBGtGCL+yIdLhhZPW7LOEaOBdm\nmO7L2eSXanEw4R0PU8hzFrYX4QKBgQC18BiI/rePug8o9M9Q4ejVOiMKEPJZgZhC\n5blUJWEPclsjorVwzKmdvuHf/WLM69rAWWFKiRZZv3m2boLPFG86DJkFCPTZBtIo\nOlCbdTuVuCiMy7RAlLSw/TBSjeIpgZ+FwJhckuBcMW3N8vIRZvT5ckPPvQDUOcPb\n8XWegVtnOwKBgBByxcrMmO2mZ8TeyjKoOCJjhMipOj872yMri8ByTN3YLkQjbJpd\nZiMhBUyA74KKCn/eTtnkR5U1kbY7SwKN1VGiOOM4fIGAoJZWLfm9TlfhmI0J6A/h\nV/Q4rE/9aYVPesjmUy7kHiNNTYsf6UbYsbs3Li1v4eEzb3Mq5E+W80xBAoGAW3CC\nREgQpbHTcLgpgfMofBIuDh8aTpXtmqGulXX75DGLUMuz+S9DiD6pc1P8VhWr6cSC\nO13O1+h+GYxNPhp9FGXEel1YAcOF2CYG4Tr4aXUXHDw9KcATWGjH4pXgtw+oxyZW\n7R/8lxlYoIub0dc3BC/DmSLayc8GewJOJQ3KjIUCgYA/XFREQmLGYWQmBjfllknr\nbP1utUJVijpIwuUn4z7GEQyhx0nNI0EMj9jf6i7KG/JC46o8nQ4b9pDU0MzwcXod\n2kGkXm9E9Q/0iV4EQIJnSsjJ4eHm8/U6rD7hA5C22QNXzPwsC2I03HWXoi1I1rfu\njxdad1A2n4/5segwE92Sbg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "advika-cloud-contact-form@advika-cloud.iam.gserviceaccount.com",
+  "client_id": "117186249446091763331",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/advika-cloud-contact-form%40advika-cloud.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
