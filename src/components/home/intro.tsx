@@ -50,7 +50,6 @@ export default function HomeIntro({ onContactClick }: Props) {
               >
                 Book A Call
               </Button>
-
             </div>
           </div>
         </div>

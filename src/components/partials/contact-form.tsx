@@ -5,11 +5,10 @@ import Link from 'next/link';
 import Formcontact from './form';
 
 export default function ContactForm() {
-
   return (
     <section className='bg-primary py-10 text-white lg:py-16 2xl:py-24'>
       <div className='container'>
-        <h2 className='text-center text-3xl font-bold leading-snug lg:leading-snug lg:text-5xl'>
+        <h2 className='text-center text-3xl font-bold leading-snug lg:text-5xl lg:leading-snug'>
           Do you have a query?
           <span className='block text-secondary'>Book a Call</span>
         </h2>

@@ -1,18 +1,18 @@
-'use client'
-import React from 'react'
-import { Button } from '../ui/button'
-import ReCAPTCHA from "react-google-recaptcha";
-import { FormSubmit } from "@/app/api/forms/route";
-import { toast } from "react-toastify";
+'use client';
+import React from 'react';
+import { Button } from '../ui/button';
+import ReCAPTCHA from 'react-google-recaptcha';
+import { FormSubmit } from '@/app/api/forms/route';
+import { toast } from 'react-toastify';
 import { Countries } from '@/data/countries';
 function Formcontact() {
   const [loading, setLoading] = React.useState(false);
-  const [name, setName] = React.useState("");
-  const [email, setEmail] = React.useState("");
-  const [contact, setContact] = React.useState("");
-  const [website, setWebsite] = React.useState("");
-  const [country, setCountry] = React.useState<string>("IN")
-  const [message, setMessage] = React.useState("");
+  const [name, setName] = React.useState('');
+  const [email, setEmail] = React.useState('');
+  const [contact, setContact] = React.useState('');
+  const [website, setWebsite] = React.useState('');
+  const [country, setCountry] = React.useState<string>('IN');
+  const [message, setMessage] = React.useState('');
   const [captchaToken, setCaptchaToken] = React.useState<string | null>(null);
   const handleCaptchaChange = (token: string | null) => {
     setCaptchaToken(token);
@@ -20,22 +20,22 @@ function Formcontact() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!captchaToken) {
-      alert("Please complete the CAPTCHA");
+      alert('Please complete the CAPTCHA');
       return;
     }
 
-    const captcha = await fetch("/api/captcha", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
+    const captcha = await fetch('/api/captcha', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ token: captchaToken }),
     });
 
     const result = await captcha.json();
 
     if (result.success) {
-      alert("Form submitted successfully!");
+      alert('Form submitted successfully!');
     } else {
-      alert("CAPTCHA verification failed!");
+      alert('CAPTCHA verification failed!');
     }
 
     setLoading(true);
@@ -48,11 +48,11 @@ function Formcontact() {
       message,
     };
 
-    const res = await fetch("/api/forms", {
+    const res = await fetch('/api/forms', {
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
-      method: "POST",
+      method: 'POST',
       body: JSON.stringify(data),
     });
 
@@ -60,19 +60,20 @@ function Formcontact() {
     const response = await res.json();
 
     if (!res.ok || response.error) {
-      toast.error("Failed to send");
+      toast.error('Failed to send');
       return;
     }
 
-    toast.success("Thank you for your information. We shall contact you shortly.");
-    setName("");
-    setEmail("");
-    setContact("");
-    setWebsite("");
+    toast.success(
+      'Thank you for your information. We shall contact you shortly.'
+    );
+    setName('');
+    setEmail('');
+    setContact('');
+    setWebsite('');
     setCountry('');
-    setMessage("");
+    setMessage('');
   };
-
 
   const selectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setCountry(e.target.value); // Error here
@@ -87,30 +88,32 @@ function Formcontact() {
     }
   };
 
-
   return (
     <div className='relative'>
       <form onSubmit={handleSubmit}>
         <div className='flex flex-col gap-5'>
           <input
             type='text'
-            className='rounded-md bg-white/10 p-5 outline-none duration-200 ease-in-out text-white placeholder:text-white focus:bg-white/20'
+            className='rounded-md bg-white/10 p-5 text-white outline-none duration-200 ease-in-out placeholder:text-white focus:bg-white/20'
             placeholder='Full Name'
             onChange={(e) => setName(e.target.value)}
-            value={name} required
+            value={name}
+            required
           />
           <div className='flex flex-col gap-5 sm:grid sm:grid-cols-2'>
             <input
               type='email'
-              className='rounded-md bg-white/10 p-5 outline-none duration-200 ease-in-out text-white placeholder:text-white focus:bg-white/20'
+              className='rounded-md bg-white/10 p-5 text-white outline-none duration-200 ease-in-out placeholder:text-white focus:bg-white/20'
               placeholder='Email Address'
               onChange={(e) => setEmail(e.target.value)}
-              value={email} required
+              value={email}
+              required
             />
             <input
               type='tel'
-              className='w-full rounded-md bg-white/10 p-5 outline-none duration-200 ease-in-out text-white placeholder:text-white focus:bg-white/20'
-              placeholder='Phone Number' required
+              className='w-full rounded-md bg-white/10 p-5 text-white outline-none duration-200 ease-in-out placeholder:text-white focus:bg-white/20'
+              placeholder='Phone Number'
+              required
               onChange={handleChange}
               value={contact}
             />
@@ -118,45 +121,51 @@ function Formcontact() {
           <div className='flex flex-col gap-5 sm:grid sm:grid-cols-2'>
             <input
               type='tel'
-              className='w-full rounded-md bg-white/10 p-5 outline-none duration-200 ease-in-out text-white placeholder:text-white focus:bg-white/20'
-              placeholder='Website' required
+              className='w-full rounded-md bg-white/10 p-5 text-white outline-none duration-200 ease-in-out placeholder:text-white focus:bg-white/20'
+              placeholder='Website'
+              required
               onChange={(e) => setWebsite(e.target.value)}
               value={website}
             />
             <select
-              className='w-full rounded-md bg-white/10 p-5 outline-none duration-200 ease-in-out text-white placeholder:text-white focus:bg-white/20'
+              className='w-full rounded-md bg-white/10 p-5 text-white outline-none duration-200 ease-in-out placeholder:text-white focus:bg-white/20'
               onChange={selectChange}
               value={country}
             >
-              <option value="" disabled>
+              <option value='' disabled>
                 Select a country
               </option>
               {Countries.map((country, index) => (
-                <option key={index + country.code} value={country.code} className='text-black/70'>
+                <option
+                  key={index + country.code}
+                  value={country.code}
+                  className='text-black/70'
+                >
                   {country.name}
                 </option>
               ))}
             </select>
           </div>
           <textarea
-            className='rounded-md bg-white/10 p-5 outline-none duration-200 ease-in-out text-white placeholder:text-white focus:bg-white/20'
+            className='rounded-md bg-white/10 p-5 text-white outline-none duration-200 ease-in-out placeholder:text-white focus:bg-white/20'
             rows={10}
-            placeholder='Your message' required
+            placeholder='Your message'
+            required
             onChange={(e) => setMessage(e.target.value)}
             value={message}
           ></textarea>
-          <div className='flex justify-between gap-5 flex-wrap items-stretch'>
-
+          <div className='flex flex-wrap items-stretch justify-between gap-5'>
             <ReCAPTCHA
-              sitekey={`${process.env.NEXt_PUBLIC_CAPTCHA_SITE_KEY}` || ""}
+              sitekey={`${process.env.NEXt_PUBLIC_CAPTCHA_SITE_KEY}` || ''}
               onChange={handleCaptchaChange}
             />
-            <Button type="submit"
+            <Button
+              type='submit'
               variant={'white'}
               size={'lg'}
-              className='!py-5 text-lg h-full w-60 font-semibold uppercase duration-200 ease-in-out hover:bg-secondary hover:text-white'
+              className='h-full w-60 !py-5 text-lg font-semibold uppercase duration-200 ease-in-out hover:bg-secondary hover:text-white'
             >
-              {loading ? "Loading..." : "Book Now"}
+              {loading ? 'Loading...' : 'Book Now'}
             </Button>
           </div>
         </div>

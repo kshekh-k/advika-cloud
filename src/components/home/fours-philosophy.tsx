@@ -31,7 +31,7 @@ export default function HomeFourSPhilosophy() {
   return (
     <section className='py-10 lg:py-16 2xl:py-24'>
       <div className='container'>
-        <h2 className='text-center text-3xl font-bold text-primary lg:leading-snug lg:text-5xl'>
+        <h2 className='text-center text-3xl font-bold text-primary lg:text-5xl lg:leading-snug'>
           Our 4&apos;S Philosophy
         </h2>
         <div className='max-w-full overflow-auto pb-3 pt-8 lg:overflow-visible lg:pb-0 xl:mt-16'>

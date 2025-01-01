@@ -1,10 +1,8 @@
-import Services from '@/components/services' 
-import React from 'react'
+import Services from '@/components/services';
+import React from 'react';
 
 function Oursevices() {
-  return (
-    <Services />
-  )
+  return <Services />;
 }
 
-export default Oursevices
+export default Oursevices;

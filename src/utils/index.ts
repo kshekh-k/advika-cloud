@@ -1,4 +1,4 @@
-import nodemailer from "nodemailer";
+import nodemailer from 'nodemailer';
 
 type Props = {
   subject: string;
@@ -8,7 +8,7 @@ type Props = {
 
 export async function sendMail(props: Props) {
   const transporter = nodemailer.createTransport({
-    host: "smtp.hostinger.com",
+    host: 'smtp.hostinger.com',
     port: 465,
     secure: true,
     auth: {

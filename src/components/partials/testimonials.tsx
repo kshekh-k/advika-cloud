@@ -11,7 +11,7 @@ export default function Testimonials() {
   return (
     <div className='container'>
       {/* Testimonials */}
-      <h2 className='text-center text-3xl font-bold leading-snug lg:leading-snug text-primary lg:text-5xl'>
+      <h2 className='text-center text-3xl font-bold leading-snug text-primary lg:text-5xl lg:leading-snug'>
         What Customers Say?
         <span className='block text-black/60'>Testimonials</span>
       </h2>
@@ -33,7 +33,7 @@ export default function Testimonials() {
           }}
           className='mySwiper'
         >
-          {TESTIMONIALS.map((item, index) =>
+          {TESTIMONIALS.map((item, index) => (
             <SwiperSlide key={index}>
               <div className='space-y-3 rounded-lg bg-primary/5 p-5 lg:p-10'>
                 <div className='relative rounded border border-primary/50 bg-white p-5 lg:p-10'>
@@ -50,7 +50,7 @@ export default function Testimonials() {
                 </div>
               </div>
             </SwiperSlide>
-          )}
+          ))}
         </Swiper>
       </div>
     </div>

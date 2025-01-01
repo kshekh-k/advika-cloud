@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import React from 'react';
 import { usePathname } from 'next/navigation';
-import {TbMenu2, TbX } from 'react-icons/tb';
+import { TbMenu2, TbX } from 'react-icons/tb';
 import Socialmedia from './social-media';
 const mainmenu = [
   {
@@ -18,7 +18,6 @@ const mainmenu = [
   {
     name: 'Our Services',
     link: '/our-services',
-     
   },
   {
     name: 'Contact us',
@@ -27,7 +26,7 @@ const mainmenu = [
   },
 ];
 function Menu() {
-  const [isSidePanelOpen, setSidePanelOpen] = React.useState(false);  
+  const [isSidePanelOpen, setSidePanelOpen] = React.useState(false);
   const pathname = usePathname();
   const isActive = pathname;
 
@@ -62,9 +61,7 @@ function Menu() {
                 className={`flex cursor-pointer items-center text-lg uppercase duration-200 ease-in-out hover:text-primary group-hover:text-primary ${isActive === item.link ? 'text-primary' : 'text-black/60'}`}
               >
                 {item.name}
-             
               </Link>
-           
             </li>
           ))}
         </ul>
@@ -94,15 +91,12 @@ function Menu() {
                         : 'border-transparent hover:border-white'
                     }`}
                   >
-                   
-                      <Link
-                        className={`relative inline-flex flex-1 justify-between py-2 text-sm font-medium uppercase duration-200 ease-in-out xl:text-base ${isActive === item.link ? 'text-white' : 'text-white/70 hover:text-secondary'}`}
-                        href={item.link}
-                      >
-                        <span>{item.name}</span>
-                      </Link>
-                 
-                  
+                    <Link
+                      className={`relative inline-flex flex-1 justify-between py-2 text-sm font-medium uppercase duration-200 ease-in-out xl:text-base ${isActive === item.link ? 'text-white' : 'text-white/70 hover:text-secondary'}`}
+                      href={item.link}
+                    >
+                      <span>{item.name}</span>
+                    </Link>
                   </li>
                 ))}
               </ul>

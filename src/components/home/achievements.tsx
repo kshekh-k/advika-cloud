@@ -97,14 +97,14 @@ export default function HomeAchievements() {
   return (
     <section className='bg-black/5 py-10 lg:py-16 2xl:py-24'>
       <div className='container'>
-        <h2 className='text-center text-3xl font-bold capitalize text-primary lg:leading-snug lg:text-5xl'>
+        <h2 className='text-center text-3xl font-bold capitalize text-primary lg:text-5xl lg:leading-snug'>
           Our Achievements
         </h2>
         <div className='mt-8 flex flex-col gap-10 xl:mt-16'>
           <div className='flex flex-col gap-5 lg:gap-10'>
             <h3 className='relative text-center text-xl font-bold text-primary after:absolute after:inset-x-0 after:top-1/2 after:h-px after:-translate-y-1/2 after:bg-black/10'>
               <span className='relative z-10 bg-[#F2F2F2] px-5 uppercase'>
-              Our Data Center Certificates
+                Our Data Center Certificates
               </span>
             </h3>
 
@@ -194,7 +194,7 @@ export default function HomeAchievements() {
                         alt={`${item}`}
                         width={100}
                         height={40}
-                        className='h-auto w-auto max-w-24 max-h-16 object-cover'
+                        className='h-auto max-h-16 w-auto max-w-24 object-cover'
                       />
                     </div>
                   ))}
@@ -220,7 +220,7 @@ export default function HomeAchievements() {
                         alt={`${item}`}
                         width={100}
                         height={40}
-                        className='h-auto w-auto max-h-16 max-w-24 object-cover'
+                        className='h-auto max-h-16 w-auto max-w-24 object-cover'
                       />
                     </div>
                   ))}
