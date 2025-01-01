@@ -20,9 +20,11 @@ function Formcontact() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!captchaToken) {
-      alert('Please complete the CAPTCHA');
+      toast.error('Please complete the CAPTCHA');
       return;
     }
+
+    setLoading(true);
 
     const captcha = await fetch('/api/captcha', {
       method: 'POST',
@@ -32,13 +34,11 @@ function Formcontact() {
 
     const result = await captcha.json();
 
-    if (result.success) {
-      alert('Form submitted successfully!');
-    } else {
-      alert('CAPTCHA verification failed!');
+    if (!result.success) {
+      toast.error('CAPTCHA verification failed!');
+      return;
     }
 
-    setLoading(true);
     const data: FormSubmit = {
       name,
       email,
@@ -56,8 +56,8 @@ function Formcontact() {
       body: JSON.stringify(data),
     });
 
-    setLoading(false);
     const response = await res.json();
+    setLoading(false);
 
     if (!res.ok || response.error) {
       toast.error('Failed to send');
