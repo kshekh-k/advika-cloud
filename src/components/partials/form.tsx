@@ -11,7 +11,7 @@ function Formcontact() {
   const [email, setEmail] = React.useState('');
   const [contact, setContact] = React.useState('');
   const [website, setWebsite] = React.useState('');
-  const [country, setCountry] = React.useState<string>('IN');
+  const [country, setCountry] = React.useState<string>('India');
   const [message, setMessage] = React.useState('');
   const [captchaToken, setCaptchaToken] = React.useState<string | null>(null);
   const handleCaptchaChange = (token: string | null) => {
@@ -77,6 +77,7 @@ function Formcontact() {
 
   const selectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setCountry(e.target.value); // Error here
+    console.log('selected country ==>' + e.target.value)
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -86,6 +87,7 @@ function Formcontact() {
     if (/^\d*$/.test(contact)) {
       setContact(contact);
     }
+
   };
 
   return (
@@ -138,7 +140,7 @@ function Formcontact() {
               {Countries.map((country, index) => (
                 <option
                   key={index + country.code}
-                  value={country.code}
+                  value={country.name}
                   className='text-black/70'
                 >
                   {country.name}

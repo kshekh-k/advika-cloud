@@ -13,12 +13,12 @@
 # testing
 /coverage
 
-site-info.txt
+./site-info.txt
 requests.http
 # next.js
 /.next/
 /out/
-site-info.txt
+./site-info.txt
 # production
 /build
 
