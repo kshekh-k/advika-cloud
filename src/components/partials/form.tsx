@@ -77,7 +77,7 @@ function Formcontact() {
 
   const selectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setCountry(e.target.value); // Error here
-    console.log('selected country ==>' + e.target.value)
+
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -161,14 +161,25 @@ function Formcontact() {
               sitekey={`${process.env.NEXT_PUBLIC_CAPTCHA_SITE_KEY}` || ''}
               onChange={handleCaptchaChange}
             />
-            <Button
-              type='submit'
-              variant={'white'}
-              size={'lg'}
-              className='h-full w-60 !py-5 text-lg font-semibold uppercase duration-200 ease-in-out hover:bg-secondary hover:text-white'
-            >
-              {loading ? 'Loading...' : 'Book Now'}
-            </Button>
+            {loading ?
+              <Button
+                type='submit'
+                variant={'white'}
+                size={'lg'} disabled
+                className='h-full w-60 !py-5 text-lg font-semibold uppercase duration-200 ease-in-out hover:bg-secondary hover:text-white'
+              >
+                Loading...
+              </Button>
+              :
+              <Button
+                type='submit'
+                variant={'white'}
+                size={'lg'}
+                className='h-full w-60 !py-5 text-lg font-semibold uppercase duration-200 ease-in-out hover:bg-secondary hover:text-white'
+              >
+                Book Now
+              </Button>
+            }
           </div>
         </div>
       </form>
