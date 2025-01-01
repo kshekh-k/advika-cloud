@@ -88,8 +88,6 @@ function Formcontact() {
     }
   };
 
-  console.log('CAPTCHA SITE KEY===>', process.env.NEXT_PUBLIC_CAPTCHA_SITE_KEY);
-
   return (
     <div className='relative'>
       <form onSubmit={handleSubmit}>
