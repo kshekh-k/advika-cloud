@@ -1,3 +1,11 @@
 Your google Captcha Site key:  6LeXbqEqAAAAAIay-I4uLQZL7NOln954atFitZkX
 
 Your google Captcha Secret key: 6LeXbqEqAAAAAD9ePWkiJ_tP6MsmTIyiT6e1HVp_
+
+
+
+
+New keys 02-01-25
+Site_key: 6Ld3iqsqAAAAAKwqrefm1iBiTMh6BeFcnmkFN-rX
+
+Secret_key:  6Ld3iqsqAAAAAAZcxtPKLrajyS4JD_0RIMctn3ih

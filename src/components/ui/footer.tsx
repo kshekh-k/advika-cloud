@@ -27,7 +27,7 @@ const HelpSupport = [
   },
   {
     label: 'Terms of Services',
-    link: '/terms-conditions',
+    link: '/terms-service',
   },
   {
     label: 'Backup Policy',
