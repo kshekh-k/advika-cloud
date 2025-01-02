@@ -97,8 +97,8 @@ export default function Footer() {
               <li className='flex items-start gap-2'>
                 <TbMapPin className='size-5 shrink-0' />
                 <span className='text-white/70'>
-                  Advika Data Center Services Pvt. Ltd. Alt F, Plot no 21 & 21A,
-                  Sector 142 Noida - 201305 (UP) India
+                  Advika Data Center Services Pvt. Ltd.
+                  <br />Alt F, Plot no 21 & 21A, Sector 142 <br />Noida - 201305 (UP) India
                 </span>
               </li>
               <li>
