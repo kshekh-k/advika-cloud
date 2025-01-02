@@ -107,7 +107,14 @@ function Termsservice() {
           <li className='mt-3 text-left font-medium leading-relaxed text-black/50 xl:text-lg xl:leading-relaxed'>
             <strong>Termination for Breach:</strong> We reserve the right to
             terminate your account without notice for violations of these Terms.
-            .
+
+          </li>
+          <li className='mt-3 text-left font-semibold leading-relaxed text-black/60 xl:text-lg xl:leading-relaxed'>
+
+            Customers must provide at least 30 days&apos; advance notice via email
+            for service cancellation.
+
+
           </li>
         </ul>
 
@@ -174,10 +181,7 @@ function Termsservice() {
           government inquiry requiring data or logs, the customer is responsible
           for providing the required information.
         </p>
-        <p className='mt-3 text-left font-semibold leading-relaxed text-black/60 xl:text-lg xl:leading-relaxed'>
-          Customers must provide at least 30 days&apos; advance notice via email
-          for service cancellation.
-        </p>
+
 
 
         <h3 className='py-3 pt-7 text-left text-xl font-bold text-black/80 lg:text-3xl'>
